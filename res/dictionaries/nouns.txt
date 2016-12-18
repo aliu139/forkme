@@ -8,3 +8,15 @@ deployment
 download
 uplink
 connection
+machine learning
+cloud
+product
+neural net
+technology
+UI/UX
+algorithm
+future
+database
+architecture
+client
+host

@@ -1,2 +1,7 @@
 large
 tremendous
+bleeding-edge
+secure
+cross-platform
+modern
+elegant

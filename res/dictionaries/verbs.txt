@@ -8,3 +8,11 @@ relink
 clone
 commit
 patch
+disrupt
+revolutionize
+augment
+exceed
+interact
+leverage
+simulate
+evolve

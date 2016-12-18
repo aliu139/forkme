@@ -142,7 +142,9 @@
     var dem = waitForLoad("res/dictionaries/dems.json");
     var art = waitForLoad("res/dictionaries/arts.json");
 
-    Promise.all([builtWith, nouns, verbs, adj, adv, interj, city, dem, art]).then(value => {
+    var markov = waitForLoad("res/weights/markov.json");
+
+    Promise.all([builtWith, nouns, verbs, adj, adv, interj, city, dem, art, markov]).then(value => {
         console.log(value);
         var builtWithArr = Object.keys(value[0]);
         var names = [''];
@@ -160,7 +162,18 @@
             art: Object.keys(value[8])
         };
 
-        console.log(DICTIONARY);
+        PROBABILITIES = {
+            "noun": normalize(value[9].noun),
+            "verb": normalize(value[9].verb),
+            "adj": normalize(value[9].adj),
+            "adv": normalize(value[9].adv),
+            "interj": normalize(value[9].interj),
+            "city": normalize(value[9].city),
+            "dem": normalize(value[9].dem),
+            "art": normalize(value[9].art)
+        }
+
+        console.log(PROBABILITIES);
 
         var mainApp = new Vue({
             el: "#mainApp",
@@ -184,10 +197,10 @@
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
                     this.readme = generateReadme();
-                    this.fbShareUrl = "https://www.facebook.com/sharer.php?caption="+"caption"+"&description="+"description" +"&u="+"https://aliu139.github.io/forkme/" + "&picture=" + this.picUrl;
+                    this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=" + "caption" + "&description=" + "description" + "&u=" + "https://aliu139.github.io/forkme/" + "&picture=" + this.picUrl;
                     //console.log("hello");
                 },
-                reset: function(){
+                reset: function () {
                     this.titleCustom = false;
                     this.titleSelected = false;
                     this.titleVal = "";

@@ -12,25 +12,6 @@ function normalize(arr) {
 // Format is [noun, verb, adj, adv, interj, city, dem, art]
 // PROBABILITIES.x is the array xProb
 var PROB_KEYS = ["noun", "verb", "adj", "adv", "interj", "city", "dem", "art"];
-var nounProb = [0, 3, 2, 1, 4, 1, 0, 0];
-var verbProb = [0, 0, 0, 5, 3, 2, 3, 1];
-var adjProb = [7, 3, 2, 1, 4, 3, 2, 6];
-var advProb = [3, 3, 3, 3, 3, 3, 3, 3];
-var interjProb = [3, 3, 3, 3, 3, 3, 3, 3];
-var cityProb = [3, 3, 3, 3, 3, 3, 3, 3];
-var demProb = [3, 3, 3, 3, 3, 3, 3, 3];
-var artProb = [3, 3, 3, 3, 3, 3, 3, 3];
-
-var PROBABILITIES = {
-    noun: normalize(nounProb),
-    verb: normalize(verbProb),
-    adj: normalize(adjProb),
-    adv: normalize(advProb),
-    interj: normalize(interjProb),
-    city: normalize(cityProb),
-    dem: normalize(demProb),
-    art: normalize(artProb)
-}
 
 // function getNextWord(prev) returns a new word based on prev
 // prev is a string from PROB_KEYS
@@ -92,7 +73,6 @@ function generateReadme() {
         README = README + currSentence;
         currDocEndProb = currDocEndProb + DELTA_SENTENCE_README;
         randDocKey = Math.random();
-
     }
 
     return README;

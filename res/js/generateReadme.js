@@ -3,21 +3,9 @@
 var DELTA_WORD_SENTENCE = 0.0026;
 var DELTA_SENTENCE_README = 0.0016;
 
-// Helper function to normalize probability array for 
-// random generation.  Takes in array with probabilities
-// like [1,4,2] and normalizes it between 0 and 1,
-// summing from left to right the ending array would be [1/7, 5/7, 7/7]
 function normalize(arr){
-    var sum = 0;
-    for (let value of arr){
-        sum = sum + value;
-    }
-    var prevSum = 0;
-    for (let i = 0; i < arr.length; i++){
-        prevSum = prevSum + arr[i];
-        arr[i] = prevSum/sum;
-    }
-    return arr;
+    var sum = arr.reduce((a, b) => a + b, 0);
+    return arr.map(val => val/sum);
 }
 
 // Probabilities
@@ -43,6 +31,8 @@ var PROBABILITIES = {
     dem: normalize(demProb),
     art: normalize(artProb)
 }
+
+console.log(PROBABILITIES["noun"]);
 
 // function getNextWord(prev) returns a new word based on prev
 // prev is a string from PROB_KEYS

@@ -132,31 +132,35 @@
 <script src="res/js/generateReadme.js"></script>
 <script src="res/js/load.js"></script>
 <script>
-    var builtWith = waitForLoad("res/dictionaries/technologies.txt");
-    var nouns = waitForLoad("res/dictionaries/nouns.txt");
-    var verbs = waitForLoad("res/dictionaries/verbs.txt");
-    var adj = waitForLoad("res/dictionaries/adjectives.txt");
-    var adv = waitForLoad("res/dictionaries/adverbs.txt");
-    var interj = waitForLoad("res/dictionaries/interjects.txt");
-    var city = waitForLoad("res/dictionaries/cities.txt");
-    var dem = waitForLoad("res/dictionaries/dems.txt");
-    var art = waitForLoad("res/dictionaries/arts.txt");
+    var builtWith = waitForLoad("res/dictionaries/technologies.json");
+    var nouns = waitForLoad("res/dictionaries/nouns.json");
+    var verbs = waitForLoad("res/dictionaries/verbs.json");
+    var adj = waitForLoad("res/dictionaries/adjectives.json");
+    var adv = waitForLoad("res/dictionaries/adverbs.json");
+    var interj = waitForLoad("res/dictionaries/interjects.json");
+    var city = waitForLoad("res/dictionaries/cities.json");
+    var dem = waitForLoad("res/dictionaries/dems.json");
+    var art = waitForLoad("res/dictionaries/arts.json");
 
     Promise.all([builtWith, nouns, verbs, adj, adv, interj, city, dem, art]).then(value => {
         console.log(value);
-        var builtWithArr = value[0];
+        var builtWithArr = Object.keys(value[0]);
         var names = [''];
 
+        console.log(value);
+
         DICTIONARY = {
-            noun: value[1],
-            verb: value[2],
-            adj: value[3],
-            adv: value[4],
-            interj: value[4],
-            city: value[5],
-            dem: value[6],
-            art: value[7]
+            noun: Object.keys(value[1]),
+            verb: Object.keys(value[2]),
+            adj: Object.keys(value[3]),
+            adv: Object.keys(value[4]),
+            interj: Object.keys(value[5]),
+            city: Object.keys(value[6]),
+            dem: Object.keys(value[7]),
+            art: Object.keys(value[8])
         };
+
+        console.log(DICTIONARY);
 
         var mainApp = new Vue({
             el: "#mainApp",

@@ -1,0 +1,98 @@
+{
+    "download": {
+        "weight": 1
+    },
+    "upload": {
+        "weight": 1
+    },
+    "install": {
+        "weight": 1
+    },
+    "reinstall": {
+        "weight": 1
+    },
+    "run": {
+        "weight": 1
+    },
+    "upgrade": {
+        "weight": 1
+    },
+    "relink": {
+        "weight": 1
+    },
+    "clone": {
+        "weight": 1
+    },
+    "commit": {
+        "weight": 1
+    },
+    "patch": {
+        "weight": 1
+    },
+    "disrupt": {
+        "weight": 1
+    },
+    "revolutionize": {
+        "weight": 1
+    },
+    "augment": {
+        "weight": 1
+    },
+    "exceed": {
+        "weight": 1
+    },
+    "interact": {
+        "weight": 1
+    },
+    "leverage": {
+        "weight": 1
+    },
+    "simulate": {
+        "weight": 1
+    },
+    "evolve": {
+        "weight": 1
+    },
+    "analyze": {
+        "weight": 1
+    },
+    "apply": {
+        "weight": 1
+    },
+    "appraise": {
+        "weight": 1
+    },
+    "classify": {
+        "weight": 1
+    },
+    "collect": {
+        "weight": 1
+    },
+    "combine": {
+        "weight": 1
+    },
+    "construct": {
+        "weight": 1
+    },
+    "infer": {
+        "weight": 1
+    },
+    "interpret": {
+        "weight": 1
+    },
+    "memoize": {
+        "weight": 1
+    },
+    "block": {
+        "weight": 1
+    },
+    "expose": {
+        "weight": 1
+    },
+    "update": {
+        "weight": 1
+    },
+    "debug": {
+        "weight": 1
+    }
+}

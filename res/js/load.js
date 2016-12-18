@@ -13,9 +13,7 @@ function loadJSON(path, callback) {
 function waitForLoad(path){
     return new Promise(function (resolve, reject) {
         loadJSON(path, function (response) {
-            var arr = response.split("\n");
-            //console.log(arr);
-            resolve(arr);
+            resolve(JSON.parse(response));
         });
     });
 }

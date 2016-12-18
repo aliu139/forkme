@@ -32,8 +32,6 @@ var PROBABILITIES = {
     art: normalize(artProb)
 }
 
-console.log(PROBABILITIES["noun"]);
-
 // function getNextWord(prev) returns a new word based on prev
 // prev is a string from PROB_KEYS
 function getNextPart(prev){

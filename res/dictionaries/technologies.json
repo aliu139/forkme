@@ -1,0 +1,167 @@
+{
+    "React": {
+        "weight": 1
+    },
+    "Angular": {
+        "weight": 1
+    },
+    "MongoDB": {
+        "weight": 1
+    },
+    "PostgreSQL": {
+        "weight": 1
+    },
+    "mySQL": {
+        "weight": 1
+    },
+    "UnderscoreJS": {
+        "weight": 1
+    },
+    "Gulp": {
+        "weight": 1
+    },
+    "LESS": {
+        "weight": 1
+    },
+    "SASS": {
+        "weight": 1
+    },
+    "Bootstrap": {
+        "weight": 1
+    },
+    "VueJS": {
+        "weight": 1
+    },
+    "Java": {
+        "weight": 1
+    },
+    "C#": {
+        "weight": 1
+    },
+    "C++": {
+        "weight": 1
+    },
+    "C": {
+        "weight": 1
+    },
+    "Assembly": {
+        "weight": 1
+    },
+    "OCaml": {
+        "weight": 1
+    },
+    "Closure": {
+        "weight": 1
+    },
+    "Uber API": {
+        "weight": 1
+    },
+    "Yelp API": {
+        "weight": 1
+    },
+    "Android SDK": {
+        "weight": 1
+    },
+    "Yeoman": {
+        "weight": 1
+    },
+    "Swift": {
+        "weight": 1
+    },
+    "Xamarin": {
+        "weight": 1
+    },
+    "Ember": {
+        "weight": 1
+    },
+    "Backbone": {
+        "weight": 1
+    },
+    "jQuery": {
+        "weight": 1
+    },
+    "D3.js": {
+        "weight": 1
+    },
+    "Mocha": {
+        "weight": 1
+    },
+    "Karma": {
+        "weight": 1
+    },
+    "PhantomJS": {
+        "weight": 1
+    },
+    "Maven": {
+        "weight": 1
+    },
+    "Babel": {
+        "weight": 1
+    },
+    "Django": {
+        "weight": 1
+    },
+    "scikit-learn": {
+        "weight": 1
+    },
+    "pandas": {
+        "weight": 1
+    },
+    "Python": {
+        "weight": 1
+    },
+    "NodeJS": {
+        "weight": 1
+    },
+    "Moment": {
+        "weight": 1
+    },
+    "Chart.js": {
+        "weight": 1
+    },
+    "Meteor": {
+        "weight": 1
+    },
+    "Socket.io": {
+        "weight": 1
+    },
+    "Materialize": {
+        "weight": 1
+    },
+    "Phaser": {
+        "weight": 1
+    },
+    "Ionic": {
+        "weight": 1
+    },
+    "RxJS": {
+        "weight": 1
+    },
+    "Webpack": {
+        "weight": 1
+    },
+    "Express": {
+        "weight": 1
+    },
+    "Polymer": {
+        "weight": 1
+    },
+    "Jade": {
+        "weight": 1
+    },
+    "Flux": {
+        "weight": 1
+    },
+    "Bower": {
+        "weight": 1
+    },
+    "Jasmine": {
+        "weight": 1
+    },
+    "Velocity": {
+        "weight": 1
+    },
+    "Zepto": {
+        "weight": 1
+    }
+}

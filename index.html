@@ -43,7 +43,7 @@
                     </div>
 
                     <div v-if="titleCustom">
-                        <input type="text" class="form-control" placeholder="Custom Title"> </input>
+                        <input type="text" class="form-control" placeholder="Custom Title" v-model="titleVal"> </input>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                         </div>
 
                         <h4> Subject</h4>
-                        <input type="text" class="form-control" placeholder="Picture of..."> </input>
+                        <input type="text" class="form-control" placeholder="Picture of..." v-model="picVal"> </input>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,41 @@
 
         <div v-if="submitted">
             <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
+            <h1>{{titleVal}}</h1>
             <img v-bind:src="picUrl"> </img>
+
+            <h2> Introduction </h2>
+
+            <p> {{titleVal}} is a cross-platform product designed to completely revolutionize the way that users interact with
+                their computers. By leveraging the full power of the quad-core processors present in most modern machines, we can 
+                simulate vast neural nets, capable of calculations that far exceed human reason. We are working on the bleeding-edge
+                by augmenting current technologies with advanced machine-learning algorithms. The beauty is that every lives on the 
+                cloud and is completely secure. {{titleVal}} is built on top of a next-generation technology stack that continues to grow
+                and evolve every day. 
+            </p>
+
+            <h2> Examples </h2>
+
+            <pre><code>
+                var foo = true;
+                if(!foo){
+                    return 5;
+                }
+                else{
+                    return 6;
+                }
+            </code></pre>
+
+            <h2> Built With: </h2>
+            <ul>
+                <li> React </li>
+                <li> MongoDB </li>
+                <li> NodeJS </li>
+                <li> AlchemyAPI </li>
+                <li> FontAwesome </li>
+            </ul>
+
+
         </div>
     </div>
     <!-- /.container -->
@@ -99,15 +133,17 @@
         data: {
             titleCustom: false,
             titleSelected: false,
+            titleVal: "",
             picCustom: false,
             picSelected: false,
+            picVal:"",
             greyscale: false,
-            pictureOf: "",
             picUrl: "http://loremflickr.com/320/240",
             submitted: false
         },
         methods: {
             submit: function () {
+                this.titleVal = (this.titleVal == "") ? "random" : this.titleVal;
                 this.submitted = true;
                 console.log("hello");
             }

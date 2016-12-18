@@ -127,6 +127,26 @@
 <script>
 
     var builtWith = ['React', 'Angular', 'MongoDB', 'PostgreSQL', 'mySQL', 'UnderscoreJS', 'Gulp', 'LESS', 'SASS', 'Bootstrap', 'VueJS'];
+    var names = [''];
+
+    var arrayFromFile = function(file){
+        var arr = [];
+
+        var txt = '';
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+            txt = xmlhttp.responseText;
+        }
+        };
+        xmlhttp.open("GET","temp.txt",true);
+        xmlhttp.send();
+
+        arr = txt.split('\n');
+        return arr;
+    };
+
+    console.log(arrayFromFile('temp.txt'));
 
     var mainApp = new Vue({
         el: "#mainApp",

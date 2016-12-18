@@ -82,12 +82,17 @@
 
             <h2> Introduction </h2>
 
+            <!--
             <p> {{titleVal}} is a cross-platform product designed to completely revolutionize the way that users interact with
                 their computers. By leveraging the full power of the quad-core processors present in most modern machines, we can 
                 simulate vast neural nets, capable of calculations that far exceed human reason. We are working on the bleeding-edge
                 by augmenting current technologies with advanced machine-learning algorithms. The beauty is that every lives on the 
                 cloud and is completely secure. {{titleVal}} is built on top of a next-generation technology stack that continues to grow
                 and evolve every day. 
+            </p>
+            -->
+
+            <p> {{readme}}
             </p>
 
             <h2> Examples </h2>
@@ -163,13 +168,15 @@
             greyscale: false,
             picUrl: "http://loremflickr.com/320/240",
             submitted: false,
-            builtWithList: []
+            builtWithList: [],
+            readme: ""
         },
         methods: {
             submit: function () {
-                this.titleVal = (this.titleVal == "") ? "random" : this.titleVal;
+                this.titleVal = (this.titleVal == "") ? generateTitle() : this.titleVal;
                 this.submitted = true;
                 this.builtWithList = _.sample(builtWith, 5);
+                this.readme = generateReadme();
                 console.log("hello");
             }
         }

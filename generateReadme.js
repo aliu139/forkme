@@ -19,11 +19,8 @@
 
 // Increases in probability of a sentence/the readme
 // ending with each additional word
-var DELTA_WORD_SENTENCE = 0.04;
-var DELTA_SENTENCE_README = 0.04;
-
-// Placeholder for words dictionary
-var wordsDict = ["hello", "hey"];
+var DELTA_WORD_SENTENCE = 0.0026;
+var DELTA_SENTENCE_README = 0.0016;
 
 // Helper function to normalize probability array for 
 // random generation.  Takes in array with probabilities
@@ -43,13 +40,13 @@ function normalize(arr){
 }
 
 // Dictionaries
-var NOUN_DICT = ["dog", "cat"];
-var VERB_DICT = ["run", "jump"];
+var NOUN_DICT = ["system", "program", "install", "dependencies", "resources", "storage", "deployment", "download", "uplink", "connection"];
+var VERB_DICT = ["download", "upload", "install", "reinstall", "run", "upgrade", "relink", "clone", "commit", "patch"];
 var ADJ_DICT = ["large", "tremendous"];
-var ADV_DICT = ["quickly", "tremendously"];
+var ADV_DICT = ["quickly", "tremendously", "rapidly", "intuitively"];
 var INTERJ_DICT = ["agile", "scrum"];
 var CITY_DICT = ["Santa Clara", "San Francisco"];
-var DEM_DICT = ["those", "that"];
+var DEM_DICT = ["those", "that", "this", "these"];
 var ART_DICT = ["a", "the"];
 
 var DICTIONARY = {
@@ -106,6 +103,13 @@ function getWord(partOfSpeech){
     return dict[randIdx];
 }
 
+
+function generateTitle(){
+    var noun = getWord("noun");
+    var adj = getWord("adj");
+    var noun2 = getWord("noun");
+    return noun[0].toUpperCase() + noun.substr(1, noun.length) + " " + adj + " " + noun2;
+}
 
 function generateReadme(){
     // Counts up how many words are in a

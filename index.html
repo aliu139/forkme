@@ -75,14 +75,23 @@
             <button type="button" class="btn btn-default" v-on:click="submit">Submit</button>
         </div>
 
-        <div class="markdown" v-if="submitted">
-            <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
-            <h1>{{titleVal}}</h1>
-            <img v-bind:src="picUrl"> </img>
+        <div v-if="submitted">
 
-            <h2> Introduction </h2>
+            <div>
+                <h3> Fork It! </h3>
+                <button type="button" class="btn btn-primary"> Copy to Clipboard </button>
+                <button type="button" class="btn btn-primary" v-on:click="reset"> Regenerate </button>
+                <button type="button" class="btn btn-primary"> Share </button>
+            </div>
 
-            <!--
+            <div class="markdown">
+                <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
+                <h1>{{titleVal}}</h1>
+                <img v-bind:src="picUrl"> </img>
+
+                <h2> Introduction </h2>
+
+                <!--
             <p> {{titleVal}} is a cross-platform product designed to completely revolutionize the way that users interact with
                 their computers. By leveraging the full power of the quad-core processors present in most modern machines, we can 
                 simulate vast neural nets, capable of calculations that far exceed human reason. We are working on the bleeding-edge
@@ -92,12 +101,12 @@
             </p>
             -->
 
-            <p> {{readme}}
-            </p>
+                <p> {{readme}}
+                </p>
 
-            <h2> Examples </h2>
+                <h2> Examples </h2>
 
-            <pre><code>
+                <pre><code>
                 var foo = true;
                 if(!foo){
                     return 5;
@@ -107,12 +116,11 @@
                 }
             </code></pre>
 
-            <h2> Built With: </h2>
-            <ul>
-                <li v-for="item in builtWithList"> {{item}}</li>
-            </ul>
-
-
+                <h2> Built With: </h2>
+                <ul>
+                    <li v-for="item in builtWithList"> {{item}}</li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- /.container -->
@@ -180,6 +188,19 @@
                     this.builtWithList = _.sample(builtWithArr, 5);
                     this.readme = generateReadme();
                     //console.log("hello");
+                },
+                reset: function(){
+                    this.titleCustom = false;
+                    this.titleSelected = false;
+                    this.titleVal = "";
+                    this.picCustom = false;
+                    this.picSelected = false;
+                    this.picVal = "";
+                    this.greyscale = false;
+                    this.picUrl = "http://loremflickr.com/320/240";
+                    this.submitted = false;
+                    this.builtWithList = [];
+                    this.readme = "";
                 }
             }
         })

@@ -81,7 +81,9 @@
                 <h3> Fork It! </h3>
                 <button type="button" class="btn btn-primary"> Copy to Clipboard </button>
                 <button type="button" class="btn btn-primary" v-on:click="reset"> Regenerate </button>
-                <button type="button" class="btn btn-primary"> Share </button>
+                <a v-bind:href="fbShareUrl">
+                    <button type="button" class="btn btn-primary"> Share </button>
+                </a>
             </div>
 
             <div class="markdown">
@@ -177,6 +179,7 @@
                 picVal: "",
                 greyscale: false,
                 picUrl: "http://loremflickr.com/320/240",
+                fbShareUrl: "https://www.facebook.com/sharer.php?caption=[caption]&description=[description]&u=[website]&picture=[image-url]",
                 submitted: false,
                 builtWithList: [],
                 readme: ""
@@ -187,6 +190,7 @@
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
                     this.readme = generateReadme();
+                    this.fbShareUrl = "https://www.facebook.com/sharer.php?caption="+"caption"+"&description="+"description" +"&u="+"https://aliu139.github.io/forkme/" + "&picture=" + this.picUrl;
                     //console.log("hello");
                 },
                 reset: function(){
@@ -198,6 +202,7 @@
                     this.picVal = "";
                     this.greyscale = false;
                     this.picUrl = "http://loremflickr.com/320/240";
+                    this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=[caption]&description=[description]&u=[website]&picture=[image-url]";
                     this.submitted = false;
                     this.builtWithList = [];
                     this.readme = "";

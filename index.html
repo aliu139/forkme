@@ -139,8 +139,10 @@
             txt = xmlhttp.responseText;
         }
         };
-        xmlhttp.open("GET","temp.txt",true);
+        xmlhttp.open("GET","https://raw.githubusercontent.com/aliu139/forkme/master/temp.txt",true);
         xmlhttp.send();
+    
+        console.log(txt);
 
         arr = txt.split('\n');
         return arr;

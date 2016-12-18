@@ -134,11 +134,29 @@
 <script>
     var builtWith = waitForLoad("res/dictionaries/technologies.txt");
     var nouns = waitForLoad("res/dictionaries/nouns.txt");
+    var verbs = waitForLoad("res/dictionaries/verbs.txt");
+    var adj = waitForLoad("res/dictionaries/adjectives.txt");
+    var adv = waitForLoad("res/dictionaries/adverbs.txt");
+    var interj = waitForLoad("res/dictionaries/interjects.txt");
+    var city = waitForLoad("res/dictionaries/cities.txt");
+    var dem = waitForLoad("res/dictionaries/dems.txt");
+    var art = waitForLoad("res/dictionaries/arts.txt");
 
-    Promise.all([builtWith, nouns]).then(values => {
-        console.log(values);
-        var builtWithArr = values[0];
+    Promise.all([builtWith, nouns, verbs, adj, adv, interj, city, dem, art]).then(value => {
+        console.log(value);
+        var builtWithArr = value[0];
         var names = [''];
+
+        DICTIONARY = {
+            noun: value[1],
+            verb: value[2],
+            adj: value[3],
+            adv: value[4],
+            interj: value[4],
+            city: value[5],
+            dem: value[6],
+            art: value[7]
+        };
 
         var mainApp = new Vue({
             el: "#mainApp",

@@ -20,27 +20,6 @@ function normalize(arr){
     return arr;
 }
 
-// Dictionaries
-var NOUN_DICT = ["system", "program", "install", "dependencies", "resources", "storage", "deployment", "download", "uplink", "connection"];
-var VERB_DICT = ["download", "upload", "install", "reinstall", "run", "upgrade", "relink", "clone", "commit", "patch"];
-var ADJ_DICT = ["large", "tremendous"];
-var ADV_DICT = ["quickly", "tremendously", "rapidly", "intuitively"];
-var INTERJ_DICT = ["agile", "scrum"];
-var CITY_DICT = ["Santa Clara", "San Francisco"];
-var DEM_DICT = ["those", "that", "this", "these"];
-var ART_DICT = ["a", "the"];
-
-var DICTIONARY = {
-    noun: NOUN_DICT,
-    verb: VERB_DICT,
-    adj: ADJ_DICT,
-    adv: ADV_DICT,
-    interj: INTERJ_DICT,
-    city: CITY_DICT,
-    dem: DEM_DICT,
-    art: ART_DICT
-}
-
 // Probabilities
 // Format is [noun, verb, adj, adv, interj, city, dem, art]
 // PROBABILITIES.x is the array xProb

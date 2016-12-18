@@ -1,0 +1,10 @@
+download
+upload
+install
+reinstall
+run
+upgrade
+relink
+clone
+commit
+patch

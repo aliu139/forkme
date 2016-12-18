@@ -1,22 +1,3 @@
-//// Array from file function
-//var arrayFromFile = function(file){
-//    var arr = [];
-//    var txt = '';
-//    var xmlhttp = new XMLHttpRequest();
-//    xmlhttp.onreadystatechange = function(){
-//        if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-//            txt = xmlhttp.responseText;
-//        }
-//    };
-//    xmlhttp.open("GET","https://raw.githubusercontent.com/aliu139/forkme/master/temp.txt",true);
-//    xmlhttp.send();
-//
-//    console.log(txt);
-//    arr = txt.split('\n');
-//    return arr;
-//};
-
-
 // Increases in probability of a sentence/the readme
 // ending with each additional word
 var DELTA_WORD_SENTENCE = 0.0026;
@@ -106,9 +87,8 @@ function getWord(partOfSpeech){
 
 function generateTitle(){
     var noun = getWord("noun");
-    var adj = getWord("adj");
     var noun2 = getWord("noun");
-    return noun[0].toUpperCase() + noun.substr(1, noun.length) + " " + adj + " " + noun2;
+    return noun[0].toUpperCase() + noun.substr(1, 3) + noun2[0].toUpperCase() + noun2.substr(1,noun2.length);
 }
 
 function generateReadme(){

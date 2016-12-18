@@ -130,56 +130,41 @@
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
 <script src="generateReadme.js"></script>
+<script src="load.js"></script>
 <script>
+    var builtWith = waitForLoad("technologies.txt");
+    var nouns = waitForLoad("nouns.txt");
 
-    var builtWith = ['React', 'Angular', 'MongoDB', 'PostgreSQL', 'mySQL', 'UnderscoreJS', 'Gulp', 'LESS', 'SASS', 'Bootstrap', 'VueJS'];
-    var names = [''];
+    Promise.all([builtWith, nouns]).then(values => {
+        console.log(values);
+        var builtWithArr = values[0];
+        var names = [''];
 
-    var arrayFromFile = function(file){
-        var arr = [];
-
-        var txt = '';
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function(){
-        if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
-            txt = xmlhttp.responseText;
-        }
-        };
-        xmlhttp.open("GET","https://raw.githubusercontent.com/aliu139/forkme/master/temp.txt",true);
-        xmlhttp.send();
-    
-        console.log(txt);
-
-        arr = txt.split('\n');
-        return arr;
-    };
-
-    console.log(arrayFromFile('temp.txt'));
-
-    var mainApp = new Vue({
-        el: "#mainApp",
-        data: {
-            titleCustom: false,
-            titleSelected: false,
-            titleVal: "",
-            picCustom: false,
-            picSelected: false,
-            picVal:"",
-            greyscale: false,
-            picUrl: "http://loremflickr.com/320/240",
-            submitted: false,
-            builtWithList: [],
-            readme: ""
-        },
-        methods: {
-            submit: function () {
-                this.titleVal = (this.titleVal == "") ? generateTitle() : this.titleVal;
-                this.submitted = true;
-                this.builtWithList = _.sample(builtWith, 5);
-                this.readme = generateReadme();
-                console.log("hello");
+        var mainApp = new Vue({
+            el: "#mainApp",
+            data: {
+                titleCustom: false,
+                titleSelected: false,
+                titleVal: "",
+                picCustom: false,
+                picSelected: false,
+                picVal: "",
+                greyscale: false,
+                picUrl: "http://loremflickr.com/320/240",
+                submitted: false,
+                builtWithList: [],
+                readme: ""
+            },
+            methods: {
+                submit: function () {
+                    this.titleVal = (this.titleVal == "") ? generateTitle() : this.titleVal;
+                    this.submitted = true;
+                    this.builtWithList = _.sample(builtWithArr, 5);
+                    this.readme = generateReadme();
+                    console.log("hello");
+                }
             }
-        }
+        })
     })
 </script>
 </body>

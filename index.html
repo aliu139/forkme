@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
     <!-- Custom styles for this template -->
-    <link href="main.css" rel="stylesheet">
+    <link href="res/css/main.css" rel="stylesheet">
 </head>
 
 <body>
@@ -129,11 +129,11 @@
 
 <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
-<script src="generateReadme.js"></script>
-<script src="load.js"></script>
+<script src="res/js/generateReadme.js"></script>
+<script src="res/js/load.js"></script>
 <script>
-    var builtWith = waitForLoad("technologies.txt");
-    var nouns = waitForLoad("nouns.txt");
+    var builtWith = waitForLoad("res/dictionaries/technologies.txt");
+    var nouns = waitForLoad("res/dictionaries/nouns.txt");
 
     Promise.all([builtWith, nouns]).then(values => {
         console.log(values);
@@ -161,7 +161,7 @@
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
                     this.readme = generateReadme();
-                    console.log("hello");
+                    //console.log("hello");
                 }
             }
         })

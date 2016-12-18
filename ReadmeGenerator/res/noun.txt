@@ -1,0 +1,11 @@
+noun
+system
+program
+install
+dependencies
+resources
+storage
+deployment
+download
+uplink
+connection

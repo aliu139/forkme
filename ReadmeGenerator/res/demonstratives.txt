@@ -1,0 +1,5 @@
+demonstratives
+this
+that
+these
+those

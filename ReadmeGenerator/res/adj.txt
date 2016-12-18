@@ -1,0 +1,10 @@
+adjective
+dependable
+scalable
+versatile
+agile
+dynamic
+user-friendly
+fault-tolerant
+distributed
+

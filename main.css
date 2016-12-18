@@ -1,0 +1,16 @@
+.panel{
+    max-width: 60%;
+}
+
+.fa{
+    padding: 5%;
+}
+
+.fa-right{
+    float:right;
+}
+
+.preselect{
+    margin-left: 5%;
+    margin-right: 5%;
+}

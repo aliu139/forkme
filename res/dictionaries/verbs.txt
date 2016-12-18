@@ -16,3 +16,17 @@ interact
 leverage
 simulate
 evolve
+analyze
+apply
+appraise
+classify
+collect
+combine
+construct
+infer
+interpret
+memoize
+block
+expose
+update
+debug

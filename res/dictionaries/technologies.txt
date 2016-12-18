@@ -9,3 +9,47 @@ LESS
 SASS
 Bootstrap
 VueJS
+Java
+C#
+C++
+C
+Assembly
+OCaml
+Closure
+Uber API
+Yelp API
+Android SDK
+Yeoman
+Swift
+Xamarin
+Ember
+Backbone
+jQuery
+D3.js
+Mocha
+Karma
+PhantomJS
+Maven
+Babel
+Django
+scikit-learn
+pandas
+Python
+NodeJS
+Moment
+Chart.js
+Meteor
+Socket.io
+Materialize
+Phaser
+Ionic
+RxJS
+Webpack
+Express
+Polymer
+Jade
+Flux
+Bower
+Jasmine
+Velocity
+Zepto

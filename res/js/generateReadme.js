@@ -4,8 +4,14 @@ var DELTA_WORD_SENTENCE = 0.017;
 var DELTA_SENTENCE_README = 0.0016;
 
 function normalize(arr) {
+    var runSum = 0;
     var sum = arr.reduce((a, b) => a + b, 0);
-    return arr.map(val => val / sum);
+    for (var i = 0; i < arr.length; i++){
+        arr[i] = (arr[i]/sum) + runSum;
+        runSum += arr[i];
+    }
+    return arr;
+    //return arr.map(val => val / sum);
 }
 
 // Probabilities
@@ -39,6 +45,9 @@ function getNextPart(prev) {
 
 function getWord(partOfSpeech) {
     var dict = DICTIONARY[partOfSpeech];
+    if (!dict){
+        return " ";
+    }
     var randIdx = Math.floor(Math.random() * dict.length);
     return dict[randIdx];
 }

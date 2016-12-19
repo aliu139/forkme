@@ -39,7 +39,7 @@ for item in newArr:
 
 # print dictionaries
 for dict in word_ret_arr.keys():
-    if len(dict)>1:
+    if len(dict)>1 and (dict.strip('.').strip(',').strip('\'') != ""):
         curr_arr = []
         if (os.path.isfile('dictionaries/' + dict + '.txt')):
             existing_dict = open('dictionaries/' + dict + '.txt', 'r')

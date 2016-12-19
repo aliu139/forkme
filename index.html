@@ -52,9 +52,9 @@
                         <h3 class="panel-title"> <b> <i> Title </i> </b></h3>
                     </div>
                     <div class="panel-body" v-if="!titleSelected">
-                        <div class="preselect">
-                            <i class="fa fa-magic fa-4x" v-on:click="titleSelected = true; titleCustom=false;"></i>
-                            <i class="fa fa-right fa-wrench fa-4x" v-on:click="titleSelected = true; titleCustom=true;"></i>
+                        <div class="preselect" v-if="!titleCustom">
+                            <i class="fa fa-magic fa-4x" v-on:click="titleSelected = true;"></i>
+                            <i class="fa fa-right fa-wrench fa-4x" v-on:click="titleCustom=true;"></i>
                         </div>
 
                         <div v-if="titleCustom">
@@ -68,9 +68,9 @@
                         <h3 class="panel-title"> <b> <i> Main Image </i> </b> </h3>
                     </div>
                     <div class="panel-body" v-if="!picSelected">
-                        <div class="preselect">
-                            <i class="fa fa-magic fa-4x" v-on:click="picSelected = true; picCustom=false;"></i>
-                            <i class="fa fa-right fa-wrench fa-4x" v-on:click="picSelected = true; picCustom=true;"></i>
+                        <div class="preselect" v-if="!picCustom">
+                            <i class="fa fa-magic fa-4x" v-on:click="picSelected = true;"></i>
+                            <i class="fa fa-right fa-wrench fa-4x" v-on:click="picCustom=true;"></i>
                         </div>
 
                         <div v-if="picCustom">

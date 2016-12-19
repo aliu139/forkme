@@ -5,3 +5,5 @@ hardest
 longest
 worst
 largest
+strongest
+least

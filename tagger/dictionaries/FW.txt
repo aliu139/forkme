@@ -2,3 +2,12 @@ vs.
 etc
 i.e.
 param
+[
+=========
+*
+//
+=
+var
+`bind`
+]
+memoizationcache.arg

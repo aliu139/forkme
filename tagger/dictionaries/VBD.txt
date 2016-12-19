@@ -45,3 +45,5 @@ added
 attributed
 tree
 implimented
+separated
+binded

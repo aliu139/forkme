@@ -16,6 +16,12 @@ body{
     margin-right: 5%;
 }
 
+button{
+    display: block !important; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .markdown{
     padding: 45px;
     word-wrap: break-word;
@@ -59,4 +65,17 @@ body{
 
 .btn-start{
     margin-top: 50px;
+}
+
+.action{
+    padding-bottom: 15px;
+}
+
+.action h3{
+    text-align: center;
+}
+
+.action button{
+    width: 80%;
+    margin-bottom: 10px;
 }

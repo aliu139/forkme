@@ -1,7 +1,7 @@
 // Increases in probability of a sentence/the readme
 // ending with each additional word
-var DELTA_WORD_SENTENCE = 0.017;
-var DELTA_SENTENCE_README = 0.0016;
+var DELTA_WORD_SENTENCE = 0.008;
+var DELTA_SENTENCE_README = 0.0002;
 
 function normalize(arr) {
     var runSum = 0;

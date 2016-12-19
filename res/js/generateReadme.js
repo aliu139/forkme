@@ -35,8 +35,8 @@ function getWord(partOfSpeech) {
 }
 
 function generateTitle() {
-    var noun = getWord("noun");
-    var noun2 = getWord("noun");
+    var noun = getWord("NN");
+    var noun2 = getWord("NN");
     return noun[0].toUpperCase() + noun.substr(1, 3) + noun2[0].toUpperCase() + noun2.substr(1, noun2.length);
 }
 

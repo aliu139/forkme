@@ -63,7 +63,7 @@ function generateReadme() {
     var randSentenceKey = Math.random();
 
     var README = "";
-    var prevPartOfSpeech = PROB_KEYS[6];
+    var prevPartOfSpeech = (Math.random() < 0.7) ? PROB_KEYS[6] : PROB_KEYS[8];
 
     // Loop to generate readme
     while (randDocKey > currDocEndProb) {

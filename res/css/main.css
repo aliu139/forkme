@@ -1,5 +1,6 @@
-.panel{
-    max-width: 60%;
+body{
+    font-family: 'Cantarell', sans-serif;
+    padding: 10px;
 }
 
 .fa{
@@ -29,4 +30,28 @@
 }
 .fade-enter, .fade-leave-active {
   opacity: 0
+}
+
+.mainText{
+    padding: 15px;
+}
+
+.mainText i{
+    float: left;
+    padding: 0;
+    padding-right: 15px;
+}
+
+.mainText h1{
+    display:inline-block; 
+}
+
+.intro{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro p{
+    display: inline-block;
 }

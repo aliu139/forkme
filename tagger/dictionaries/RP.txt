@@ -1,1 +1,3 @@
 out
+up
+down

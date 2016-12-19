@@ -1,1 +1,10 @@
 and
+&
+or
+nor
+but
+And
+AVL
+Splay
+But
+Overall

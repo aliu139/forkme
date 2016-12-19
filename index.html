@@ -31,6 +31,7 @@
                 <i class="fa fa-code-fork fa-5x" aria-hidden="true"></i>
                 <h1><b><i>ForkMe</i></b></h1>
             </div>
+            <div v-if="!startApp">
             <i> <p> ''Perhaps if we wrote programs from childhood on, as adults we'd be able to read them.''</p> </i>
             <i> <p> - Alan J. Perlis</p> </i>
             <p> In a perfect world, every repository on GitHub would have a clear README, capable of letting visitors know 
@@ -39,16 +40,19 @@
                 automating the process! Even if you aren't familiar with the newest startup jargon, let our product revolutionize
                 the way that you document your product.
             </p>
+
+            <button type="button" class="btn btn-default btn-start" v-on:click="startApp = true"> Document Your App! </button>
+            </div>
         </div>
 
         <transition name="fade">
-            <div v-if="!submitted">
+            <div v-if="!submitted && startApp">
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading" v-on:click="titleSelected = !titleSelected">
                         <h3 class="panel-title"> <b> <i> Title </i> </b></h3>
                     </div>
-                    <div class="panel-body">
-                        <div class="preselect" v-if="!titleSelected">
+                    <div class="panel-body" v-if="!titleSelected">
+                        <div class="preselect">
                             <i class="fa fa-magic fa-4x" v-on:click="titleSelected = true; titleCustom=false;"></i>
                             <i class="fa fa-right fa-wrench fa-4x" v-on:click="titleSelected = true; titleCustom=true;"></i>
                         </div>
@@ -60,11 +64,11 @@
                 </div>
 
                 <div class="panel panel-default">
-                    <div class="panel-heading">
+                    <div class="panel-heading"  v-on:click="picSelected = !picSelected">
                         <h3 class="panel-title"> <b> <i> Main Image </i> </b> </h3>
                     </div>
-                    <div class="panel-body">
-                        <div class="preselect" v-if="!picSelected">
+                    <div class="panel-body" v-if="!picSelected">
+                        <div class="preselect">
                             <i class="fa fa-magic fa-4x" v-on:click="picSelected = true; picCustom=false;"></i>
                             <i class="fa fa-right fa-wrench fa-4x" v-on:click="picSelected = true; picCustom=true;"></i>
                         </div>
@@ -191,6 +195,7 @@
         var mainApp = new Vue({
             el: "#mainApp",
             data: {
+                startApp: false,
                 titleCustom: false,
                 titleSelected: false,
                 titleVal: "",

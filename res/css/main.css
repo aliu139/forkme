@@ -56,3 +56,7 @@ body{
 .intro p{
     display: inline-block;
 }
+
+.btn-start{
+    margin-top: 50px;
+}

@@ -47,7 +47,7 @@
 
         <transition name="fade">
             <div v-if="!submitted && startApp">
-                <div class="panel panel-default">
+                <div class="panel panel-default" v-bind:class="{ 'panel-success': titleSelected }" >
                     <div class="panel-heading" v-on:click="titleSelected = !titleSelected">
                         <h3 class="panel-title"> <b> <i> Title </i> </b></h3>
                     </div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default">
+                <div class="panel panel-default" v-bind:class="{ 'panel-success': picSelected }" >
                     <div class="panel-heading"  v-on:click="picSelected = !picSelected">
                         <h3 class="panel-title"> <b> <i> Main Image </i> </b> </h3>
                     </div>

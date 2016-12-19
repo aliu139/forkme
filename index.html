@@ -31,8 +31,14 @@
                 <i class="fa fa-code-fork fa-5x" aria-hidden="true"></i>
                 <h1><b><i>ForkMe</i></b></h1>
             </div>
-            <p>Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones
-                HTML document.</p>
+            <i> <p> ''Perhaps if we wrote programs from childhood on, as adults we'd be able to read them.''</p> </i>
+            <i> <p> - Alan J. Perlis</p> </i>
+            <p> In a perfect world, every repository on GitHub would have a clear README, capable of letting visitors know 
+                about the purpose, usages, and history behind a project. However, writing a consise yet comprehensive README
+                is an art that takes time and thought. ForkMe is our attempt at disrupting the current ecosystem of READMEs, by 
+                automating the process! Even if you aren't familiar with the newest startup jargon, let our product revolutionize
+                the way that you document your product.
+            </p>
         </div>
 
         <transition name="fade">
@@ -43,8 +49,8 @@
                     </div>
                     <div class="panel-body">
                         <div class="preselect" v-if="!titleSelected">
-                            <i class="fa fa-magic fa-5x" v-on:click="titleSelected = true; titleCustom=false;"></i>
-                            <i class="fa fa-right fa-wrench fa-5x" v-on:click="titleSelected = true; titleCustom=true;"></i>
+                            <i class="fa fa-magic fa-4x" v-on:click="titleSelected = true; titleCustom=false;"></i>
+                            <i class="fa fa-right fa-wrench fa-4x" v-on:click="titleSelected = true; titleCustom=true;"></i>
                         </div>
 
                         <div v-if="titleCustom">
@@ -59,8 +65,8 @@
                     </div>
                     <div class="panel-body">
                         <div class="preselect" v-if="!picSelected">
-                            <i class="fa fa-magic fa-5x" v-on:click="picSelected = true; picCustom=false;"></i>
-                            <i class="fa fa-right fa-wrench fa-5x" v-on:click="picSelected = true; picCustom=true;"></i>
+                            <i class="fa fa-magic fa-4x" v-on:click="picSelected = true; picCustom=false;"></i>
+                            <i class="fa fa-right fa-wrench fa-4x" v-on:click="picSelected = true; picCustom=true;"></i>
                         </div>
 
                         <div v-if="picCustom">

@@ -28,3 +28,9 @@ is
 has
 understands
 follows
+marks
+makes
+is
+has
+understands
+follows

@@ -18,3 +18,7 @@ built
 gained
 intended
 adopted
+built
+gained
+intended
+adopted

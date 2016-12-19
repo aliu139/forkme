@@ -18,3 +18,7 @@ build
 be
 weed
 print
+build
+be
+weed
+print

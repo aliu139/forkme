@@ -53,3 +53,14 @@ tools
 if-/else-statements
 loops
 numbers
+principles
+solutions
+problems
+standards
+non-programmers
+interviews
+rules
+tools
+if-/else-statements
+loops
+numbers

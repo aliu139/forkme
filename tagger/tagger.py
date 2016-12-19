@@ -41,9 +41,19 @@ for item in newArr:
 # print dictionaries
 for dict in word_ret_arr.keys():
     if len(dict)>1:
-        curr_dict = open('dictionaries/' + dict + '.txt', 'a')
+        curr_arr = []
+        if (os.path.isfile('dictionaries/' + dict + '.txt')):
+            existing_dict = open('dictionaries/' + dict + '.txt', 'r')
+            curr_arr = existing_dict.readlines()
+            curr_arr = map(lambda a: a.strip('\n'), curr_arr)
+
         for word in word_ret_arr[dict]:
-            curr_dict.write(word + '\n')
+            if (word not in curr_arr):
+                curr_arr.append(word)
+
+    curr_dict = open('dictionaries/' + dict + '.txt', 'w')
+    for word in curr_arr:
+        curr_dict.write(word + '\n')
 # save probabilities
 prob_output = json.dumps(prob_ret_arr)
 out_prob = open('dictionaries/probability.data', 'w')

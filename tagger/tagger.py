@@ -35,6 +35,7 @@ for item in newArr:
     prob_ret_arr[prev_key][curr_key] +=1
     if (word not in word_ret_arr[curr_key]):
         word_ret_arr[curr_key].append(word)
+    prev_key = curr_key
 
 # print dictionaries
 for dict in word_ret_arr.keys():

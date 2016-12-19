@@ -23,13 +23,11 @@ else:
 word_ret_arr = {}
 
 prev_key = newArr.pop(0)[1]
-prob_ret_arr[prev_key] = {}
-word_ret_arr[prev_key] = []
 for item in newArr:
     curr_key = item[1]
     word = item[0]
-    if curr_key not in prob_ret_arr:
-        prob_ret_arr[curr_key] = {}
+    if prev_key not in prob_ret_arr:
+        prob_ret_arr[prev_key] = {}
     if curr_key not in word_ret_arr:
         word_ret_arr[curr_key] = []
     if curr_key not in prob_ret_arr[prev_key]:
@@ -51,9 +49,9 @@ for dict in word_ret_arr.keys():
             if (word not in curr_arr):
                 curr_arr.append(word)
 
-    curr_dict = open('dictionaries/' + dict + '.txt', 'w')
-    for word in curr_arr:
-        curr_dict.write(word + '\n')
+        curr_dict = open('dictionaries/' + dict + '.txt', 'w')
+        for word in curr_arr:
+            curr_dict.write(word + '\n')
 # save probabilities
 prob_output = json.dumps(prob_ret_arr)
 out_prob = open('dictionaries/probability.data', 'w')

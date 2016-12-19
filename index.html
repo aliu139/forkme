@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="Austin Liu (aliu139)">
-    <link rel="icon" href="../../favicon.ico">
+    <link rel="icon" href="res/forkme.ico">
 
     <title>ForkMe</title>
 
@@ -220,7 +220,7 @@
                     let normalTemp =  (window.screen.width > 400) ? "http://loremflickr.com/320/240/" : "http://loremflickr.com/150/150/";
 
                     this.picUrl = (this.greyscale) ? (greyTemp + this.picVal) : (normalTemp + this.picVal);
-                    this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=" + "caption" + "&description=" + "description" + "&u=" + "https://aliu139.github.io/forkme/" + "&picture=" + this.picUrl;
+                    this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=" + this.titleVal + "&description=" + "I just made an amazing README for my project, " + this.titleVal + " on ForkMe! Come take a look!" + "&u=" + "https://aliu139.github.io/forkme/" + "&picture=" + this.picUrl;
                     //console.log(this.picUrl);
                 },
                 reset: function () {

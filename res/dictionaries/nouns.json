@@ -5,10 +5,7 @@
     "program": {
         "weight": 1
     },
-    "install": {
-        "weight": 1
-    },
-    "dependencies": {
+    "dependency": {
         "weight": 1
     },
     "resources": {
@@ -120,6 +117,24 @@
         "weight": 1
     },
     "state": {
+        "weight": 1
+    },
+    "we": {
+        "weight": 1
+    },
+    "the company": {
+        "weight": 1
+    },
+    "our developers": {
+        "weight": 1
+    },
+    "our executives": {
+        "weight": 1
+    },
+    "people": {
+        "weight": 1
+    },
+    "way": {
         "weight": 1
     }
 }

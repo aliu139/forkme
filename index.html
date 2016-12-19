@@ -30,74 +30,75 @@
                 HTML document.</p>
         </div>
 
-        <div v-if="!submitted">
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Title</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="preselect" v-if="!titleSelected">
-                        <i class="fa fa-magic fa-5x" v-on:click="titleSelected = true; titleCustom=false;"></i>
-                        <i class="fa fa-right fa-wrench fa-5x" v-on:click="titleSelected = true; titleCustom=true;"></i>
+        <transition name="fade">
+            <div v-if="!submitted">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Title</h3>
                     </div>
-
-                    <div v-if="titleCustom">
-                        <input type="text" class="form-control" placeholder="Custom Title" v-model="titleVal"> </input>
-                    </div>
-                </div>
-            </div>
-
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Main Image</h3>
-                </div>
-                <div class="panel-body">
-                    <div class="preselect" v-if="!picSelected">
-                        <i class="fa fa-magic fa-5x" v-on:click="picSelected = true; picCustom=false;"></i>
-                        <i class="fa fa-right fa-wrench fa-5x" v-on:click="picSelected = true; picCustom=true;"></i>
-                    </div>
-
-                    <div v-if="picCustom">
-                        <h4> Filter </h4>
-                        <div class="btn-group" role="group" aria-label="...">
-                            <button type="button" class="btn btn-default">Grey</button>
-                            <button type="button" class="btn btn-default">Red</button>
-                            <button type="button" class="btn btn-default">Blue</button>
+                    <div class="panel-body">
+                        <div class="preselect" v-if="!titleSelected">
+                            <i class="fa fa-magic fa-5x" v-on:click="titleSelected = true; titleCustom=false;"></i>
+                            <i class="fa fa-right fa-wrench fa-5x" v-on:click="titleSelected = true; titleCustom=true;"></i>
                         </div>
 
-                        <h4> Subject</h4>
-                        <input type="text" class="form-control" placeholder="Picture of..." v-model="picVal"> </input>
+                        <div v-if="titleCustom">
+                            <input type="text" class="form-control" placeholder="Custom Title" v-model="titleVal"> </input>
+                        </div>
                     </div>
                 </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Main Image</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="preselect" v-if="!picSelected">
+                            <i class="fa fa-magic fa-5x" v-on:click="picSelected = true; picCustom=false;"></i>
+                            <i class="fa fa-right fa-wrench fa-5x" v-on:click="picSelected = true; picCustom=true;"></i>
+                        </div>
+
+                        <div v-if="picCustom">
+                            <h4> Filter </h4>
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default" v-on:click="greyscale = true">Grey</button>
+                                <button type="button" class="btn btn-default" v-on:click="greyscale = false">Red</button>
+                                <button type="button" class="btn btn-default" v-on:click="greyscale = false">Blue</button>
+                            </div>
+
+                            <h4> Subject</h4>
+                            <input type="text" class="form-control" placeholder="Picture of..." v-model="picVal"> </input>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-default" v-on:click="submit">Submit</button>
             </div>
+        </transition>
 
-            <button type="button" class="btn btn-default" v-on:click="submit">Submit</button>
-        </div>
+        <transition name="fade">
+            <div v-if="submitted">
+                <div>
+                    <h3> Fork It! </h3>
+                    <button type="button" class="btn btn-primary"> Copy to Clipboard </button>
+                    <button type="button" class="btn btn-primary" v-on:click="reset"> Regenerate </button>
+                    <a v-bind:href="fbShareUrl">
+                        <button type="button" class="btn btn-primary"> Share </button>
+                    </a>
+                </div>
 
-        <div v-if="submitted">
+                <div class="markdown">
+                    <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
+                    <h1>{{titleVal}}</h1>
+                    <img v-bind:src="picUrl"> </img>
 
-            <div>
-                <h3> Fork It! </h3>
-                <button type="button" class="btn btn-primary"> Copy to Clipboard </button>
-                <button type="button" class="btn btn-primary" v-on:click="reset"> Regenerate </button>
-                <a v-bind:href="fbShareUrl">
-                    <button type="button" class="btn btn-primary"> Share </button>
-                </a>
-            </div>
+                    <h2> Introduction </h2>
 
-            <div class="markdown">
-                <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
-                <h1>{{titleVal}}</h1>
-                <img v-bind:src="picUrl"> </img>
+                    <p> {{readme}} </p>
 
-                <h2> Introduction </h2>
+                    <h2> Examples </h2>
 
-                <p> {{readme}} </p>
-
-                <h2> Examples </h2>
-
-                <pre><code>
+                    <pre><code>
                 var foo = true;
 
                 if(!foo){
@@ -108,12 +109,13 @@
                 }
                 </code></pre>
 
-                <h2> Built With: </h2>
-                <ul>
-                    <li v-for="item in builtWithList"> {{item}}</li>
-                </ul>
+                    <h2> Built With: </h2>
+                    <ul>
+                        <li v-for="item in builtWithList"> {{item}}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </transition>
     </div>
     <!-- /.container -->
 
@@ -183,7 +185,7 @@
                 titleVal: "",
                 picCustom: false,
                 picSelected: false,
-                picVal: "",
+                picVal: "tech",
                 greyscale: false,
                 picUrl: "http://loremflickr.com/320/240",
                 fbShareUrl: "https://www.facebook.com/sharer.php?caption=[caption]&description=[description]&u=[website]&picture=[image-url]",
@@ -197,8 +199,9 @@
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
                     this.readme = generateReadme();
+                    this.picUrl = (this.greyscale) ? ("http://loremflickr.com/g/320/240/" + this.picVal) : ("http://loremflickr.com/320/240/" + this.picVal);
                     this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=" + "caption" + "&description=" + "description" + "&u=" + "https://aliu139.github.io/forkme/" + "&picture=" + this.picUrl;
-                    //console.log("hello");
+                    console.log(this.picUrl);
                 },
                 reset: function () {
                     this.titleCustom = false;
@@ -206,7 +209,7 @@
                     this.titleVal = "";
                     this.picCustom = false;
                     this.picSelected = false;
-                    this.picVal = "";
+                    this.picVal = "tech";
                     this.greyscale = false;
                     this.picUrl = "http://loremflickr.com/320/240";
                     this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=[caption]&description=[description]&u=[website]&picture=[image-url]";

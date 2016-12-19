@@ -10,10 +10,29 @@ function loadJSON(path, callback) {
     xobj.send(null);
 }
 
-function waitForLoad(path){
+function waitForLoad(path) {
     return new Promise(function (resolve, reject) {
         loadJSON(path, function (response) {
             resolve(JSON.parse(response));
         });
     });
 }
+
+function waitFor(path) {
+    return new Promise(function (resolve, reject) {
+        loadJSON(path, function (response) {
+            resolve(_.uniq(response.split('\n')));
+        });
+    });
+}
+
+var builtWith = waitForLoad("res/dictionaries/technologies.json");
+
+var PROB_KEYS_AUGMENTED = ["CC", "DT", "IN", "JJ", "JJR", "MD", "NN", "NNP", "NNS", "PRP", "RB", "RBR", "RP", "TO", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WRB"];
+var load_arr = [builtWith];
+for(key in PROB_KEYS_AUGMENTED){
+    //console.log("tagger/dictionaries/" + PROB_KEYS_AUGMENTED[key] + ".txt");
+    load_arr.push(waitFor("tagger/dictionaries/" + PROB_KEYS_AUGMENTED[key] + ".txt"));
+}
+
+load_arr.push(waitForLoad("tagger/dictionaries/probability.data"))

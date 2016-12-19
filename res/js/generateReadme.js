@@ -11,7 +11,8 @@ function normalize(arr) {
 // Probabilities
 // Format is [noun, verb, adj, adv, interj, city, dem, art]
 // PROBABILITIES.x is the array xProb
-var PROB_KEYS = ["noun", "verb", "adj", "adv", "interj", "city", "dem", "art"];
+// var PROB_KEYS = ["noun", "verb", "adj", "adv", "interj", "city", "dem", "art"];
+var PROB_KEYS = ["CC", "DT", "IN", "JJ", "JJR", "MD", "NN", "NNP", "NNS", "PRP", "RB", "RBR", "RP", "TO", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WRB"];
 
 // function getNextWord(prev) returns a new word based on prev
 // prev is a string from PROB_KEYS

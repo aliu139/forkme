@@ -22,10 +22,8 @@ know
 sort
 run
 take
-isolate
 top
-anaylze
-:size
+analyze
 check
 ignore
 treat
@@ -33,7 +31,7 @@ eliminate
 add
 like
 first
-Gave
+gave
 want
 worry
 implement
@@ -62,7 +60,7 @@ handle
 specialize
 notify
 return
-Thus
+thus
 modify
 give
 allocate/deallocate
@@ -81,16 +79,13 @@ rotate
 hang
 delete
 write
-Take
 separate
 note
-getDataAsArray
+getdataasarray
 force
 begin
-See
-Run
 decipher
-Weiss
+weiss
 seem
 find
 traverse
@@ -98,4 +93,3 @@ slow
 spend
 search
 streamline
-selection.ps

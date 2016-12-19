@@ -1,12 +1,10 @@
 README
 
 included:
-All source files (.cc, .hh, .cpp, .h)
 this README
 Makefile
 Output dumped by gprof for 5 tests (see below on why I don't have profiling data for BST/words.txt test)
 
-Homework #5
 
 I'd like to first mention that the biggest problems I encountered during this project were really stupid and idiotic typos; simple things like accidentally putting a colon where a semicolon belong (for the last method of a class of all cases! Gave me weird errors about no constructor body) or dumb errors in my Makefile, which caused all sorts of weird compiling issues.
 

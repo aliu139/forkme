@@ -3,6 +3,9 @@ import sys
 import nltk
 import json
 import os
+
+TAGGER_IGNORE = ['\'', '-', '^', '&', '>']
+
 if (len(sys.argv) > 1):
     print("tagging " + sys.argv[1])
 else:
@@ -39,7 +42,7 @@ for item in newArr:
 
 # print dictionaries
 for dict in word_ret_arr.keys():
-    if len(dict)>1 and (dict.strip('.').strip(',').strip('\'') != ""):
+    if len(dict)>1 and (dict.strip('.').strip(',').strip('\'') != ""): # should find a better way to do this
         curr_arr = []
         if (os.path.isfile('dictionaries/' + dict + '.txt')):
             existing_dict = open('dictionaries/' + dict + '.txt', 'r')
@@ -47,7 +50,8 @@ for dict in word_ret_arr.keys():
             curr_arr = map(lambda a: a.strip('\n'), curr_arr)
 
         for word in word_ret_arr[dict]:
-            if (word not in curr_arr):
+            word = word.lower()
+            if (word not in curr_arr) and not (word[0] in TAGGER_IGNORE):
                 curr_arr.append(word)
 
         curr_dict = open('dictionaries/' + dict + '.txt', 'w')

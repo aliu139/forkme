@@ -13,9 +13,6 @@ thought
 was
 created
 visited
-]
-overlooked
-took
 included
 encountered
 caused
@@ -29,6 +26,7 @@ migrated
 got
 ran
 decided
+took
 coded
 spent
 expected
@@ -39,7 +37,7 @@ seemed
 existed
 allowed
 discussed
-hangPRight
+hangpright
 gave
 followed
 copied

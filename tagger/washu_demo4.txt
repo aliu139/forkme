@@ -1,4 +1,3 @@
-Homework 5 - readme.txt
 
 
 
@@ -7,15 +6,7 @@ How To Run "word-count":
 of SelectionSort ("-selectionSort"), QuickSort ("-quickSort"), Heapsort ("-heapSort").  If
 no sorting algorithm is specified, we default to Heapsort.  Below is the general command:
 
-	   ./word-count "tree" "sort" < "inputfile" > "outputfile"
 
-
-
-Files Includes With This Project:
-      AVLNode.cpp     BSTNode.cpp	       SplayTree.cpp     Pair.cpp	      Makefile       heap.ps
-      AVLNode.h	      BSTNode.h		       SplayTree.h	 Pair.h		      word-count     quick.ps
-      AVLTree.cpp     BinarySearchTree.cpp     Heap.cpp		 Main.cpp	      readme.txt     selection.ps
-      AVLTree.h	      BinarySearchTree.h       Heap.h		 TemplateInst.cpp     
 
 
 
@@ -51,21 +42,6 @@ But, he uses common words more frequently, so it would seem that he has a smalle
 Shakespeares.
      Also, Shakespeare's results below are very regular, whereas Bacon's are not.  Based on all this,
 there is not enough evidence to show that Bacon wrote the works attributed to Shakespeare.
-
-William Shakespeare:
-     total words: 14872, average wpb: 42.3482
-     hamlet: 8311 words, 40.2782 wpb
-	  "the"(0.1167), "and"(0.0852), "of"(0.0801), "to"(0.0760), "I"(0.0626)
-     alls-well-that-ends-well: 6561 words, 44.4181 wpb
-          "the"(0.1082), "I"(0.1018), "and"(0.0806), "to"(0.0759), "of"(0.0734)
-
-Sir Francis Bacon:
-    total words: 16848, average wpb: 43.4245
-    the-essays: 12174 words, 38.9955 wpb
-         "the"(0.2243), "of"(0.1733), "and"(0.1719), "to"(0.1232), "a"(0.0923)
-    the-new-atlantis: 4674 words, 47.8534 wpb
-         "of"(0.1863), "the"(0.1771), "and"(0.1739), "to"(0.0849), "that"(0.0562)	
-
 
 
 Profiling Results:
@@ -118,6 +94,3 @@ can see quick sort and heap sort aren't growning very quickly, while selection s
 rapidly with input size increase.
 
 	Included are the following plots:
-	     quick.ps - QuickSort graph.
-	     selection.ps - SelectionSort graph.
-	     heap.ps - HeapSort graph.

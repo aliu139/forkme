@@ -92,13 +92,16 @@ function generateReadme() {
         if (isNewSentence){
             currSentence = currSentence[0].toUpperCase() + currSentence.substr(1, currSentence.length);
         }
-        if (sentenceWordCounter < 4 && Math.random() < 0.4){
+        if (sentenceWordCounter > 0 && sentenceWordCounter < 4 && Math.random() < 0.4){
             // With probability 0.4, make a short sentence into a clause
             currSentence = currSentence + ', ';
             isNewSentence = false;
-        } else {
+        } else if (sentenceWordCounter > 0){
             currSentence = currSentence + '. ';
             isNewSentence = true;
+        } else {
+            currSentence = currSentence + ' ';
+            isNewSentence = false;
         }
         README = README + currSentence;
         sentenceWordCounter = 0;

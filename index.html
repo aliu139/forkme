@@ -186,7 +186,7 @@
                     this.titleVal = (this.titleVal == "") ? generateTitle() : this.titleVal;
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
-                    this.readme = generateReadme();
+                    this.readme = generateReadme(this.titleVal);
 
                     let greyTemp = (window.screen.width > 400) ? "http://loremflickr.com/g/320/240/" : "http://loremflickr.com/g/150/150/";
                     let normalTemp =  (window.screen.width > 400) ? "http://loremflickr.com/320/240/" : "http://loremflickr.com/150/150/";

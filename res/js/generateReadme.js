@@ -58,7 +58,7 @@ function generateTitle() {
     return noun[0].toUpperCase() + noun.substr(1, 3) + noun2[0].toUpperCase() + noun2.substr(1, noun2.length);
 }
 
-function generateReadme() {
+function generateReadme(titleVal) {
     // Counts up how many words are in a
     // sentence and how many in a word.  
     // Sentence counter resets at end of each sentence.
@@ -67,6 +67,7 @@ function generateReadme() {
     var currDocEndProb = 0;
     var currSentenceEndProb = 0;
     var isNewSentence = true;
+    var titleProb = 0.05;
 
     var randDocKey = Math.random();
     var randSentenceKey = Math.random();
@@ -83,6 +84,9 @@ function generateReadme() {
         randSentenceKey = Math.random();
         // Loop to generate sentence
         while (randSentenceKey > currSentenceEndProb) {
+            if (Math.random() < titleProb){
+                currSentence = currSentence + ' ' + titleVal;
+            }
             currSentence = currSentence + ' ' + getWord(prevPartOfSpeech);
             prevPartOfSpeech = getNextPart(prevPartOfSpeech);
             currSentenceEndProb += DELTA_WORD_SENTENCE;

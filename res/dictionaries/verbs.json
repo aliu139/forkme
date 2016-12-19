@@ -94,5 +94,29 @@
     },
     "debug": {
         "weight": 1
+    },
+    "is": {
+        "weight": 1
+    },
+    "are": {
+        "weight": 1
+    },
+    "use": {
+        "weight": 1
+    },
+    "made": {
+        "weight": 1
+    },
+    "believe": {
+        "weight": 1
+    },
+    "saw": {
+        "weight": 1
+    },
+    "invented": {
+        "weight": 1
+    },
+    "needed": {
+        "weight": 1
     }
 }

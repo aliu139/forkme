@@ -19,13 +19,22 @@ var PROB_KEYS = ["CC", "DT", "IN", "JJ", "JJR", "MD", "NN", "NNP", "NNS", "PRP",
 function getNextPart(prev) {
     var prevIdx = PROB_KEYS.indexOf(prev);
     var rand = Math.random();
-    var curr = PROBABILITIES[prev];
-    for (let i = 0; i < curr.length; i++) {
-        if (rand < curr[i]) {
-            return PROB_KEYS[i];
+    var curr = Object.keys(PROBABILITIES[prev]);
+    var currVal = [];
+    for(key in curr){
+        currVal.push(PROBABILITIES[prev][curr[key]]);
+    }
+    // console.log(curr);
+    // console.log(currVal);
+
+    currVal = normalize(currVal);
+
+    for (let i = 0; i < currVal.length; i++) {
+        if (rand < currVal[i]) {
+            return curr[i];
         }
     }
-    return PROB_KEYS[0];
+    return curr[0];
 }
 
 function getWord(partOfSpeech) {
@@ -54,7 +63,7 @@ function generateReadme() {
     var randSentenceKey = Math.random();
 
     var README = "";
-    var prevPartOfSpeech = PROB_KEYS[0];
+    var prevPartOfSpeech = PROB_KEYS[6];
 
     // Loop to generate readme
     while (randDocKey > currDocEndProb) {

@@ -1,6 +1,6 @@
 // Increases in probability of a sentence/the readme
 // ending with each additional word
-var DELTA_WORD_SENTENCE = 0.0026;
+var DELTA_WORD_SENTENCE = 0.017;
 var DELTA_SENTENCE_README = 0.0016;
 
 function normalize(arr) {
@@ -47,6 +47,7 @@ function generateReadme() {
     var sentenceWordCounter = 0;
     var currDocEndProb = 0;
     var currSentenceEndProb = 0;
+    var isNewSentence = true;
 
     var randDocKey = Math.random();
     var randSentenceKey = Math.random();
@@ -65,12 +66,23 @@ function generateReadme() {
         while (randSentenceKey > currSentenceEndProb) {
             currSentence = currSentence + ' ' + getWord(prevPartOfSpeech);
             prevPartOfSpeech = getNextPart(prevPartOfSpeech);
-            currSentenceEndProb = currSentenceEndProb + DELTA_WORD_SENTENCE;
+            currSentenceEndProb += DELTA_WORD_SENTENCE;
+            sentenceWordCounter += 1;
             randSentenceKey = Math.random();
         }
-        currSentence = currSentence + '. ';
-        currSentence = currSentence[0].toUpperCase() + currSentence.substr(1, currSentence.length);
+        if (isNewSentence){
+            currSentence = currSentence[0].toUpperCase() + currSentence.substr(1, currSentence.length);
+        }
+        if (sentenceWordCounter < 4 && Math.random() < 0.4){
+            // With probability 0.4, make a short sentence into a clause
+            currSentence = currSentence + ', ';
+            isNewSentence = false;
+        } else {
+            currSentence = currSentence + '. ';
+            isNewSentence = true;
+        }
         README = README + currSentence;
+        sentenceWordCounter = 0;
         currDocEndProb = currDocEndProb + DELTA_SENTENCE_README;
         randDocKey = Math.random();
     }

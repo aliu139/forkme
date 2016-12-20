@@ -1,8 +1,15 @@
 or
-and
+*you
 but
+and
+*if
+no
+*
+yet
+weeks
 var
 memoizationcache.arg
+whether
 nor
 avl
 splay

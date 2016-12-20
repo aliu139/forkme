@@ -1,0 +1,106 @@
+[preface]
+== 97 Things Every Agile Developer Should Know
+
+Welcome to _97 Things Every Agile Developer Should Know_, pearls of wisdom for programmers collected from leading Agile practitioners.  There is no overarching narrative: The collection is intended simply to contain multiple and varied perspectives on what it is that contributors to the project feel programmers should know. This can be anything from code-focused advice to culture, from algorithm usage to agile thinking, from implementation know-how to professionalism, from style to substance, etc. _For Guidelines, please see Contributors_Guidelines located in the repository._
+
+=== List of Contributors
+
+Anyone who has https://github.com/oreillymedia/97-things-every-agile-developer-should-know/network/members[forked this project] is a potential contributor. Follow the link to the fork of another contributor to see the changes/updates. For example, click on any forked version of the book to see what the contributor is working on.
+
+This book is open source, so if you'd like to contribute, make a correction, or otherwise participate in the project, check out https://github.com/oreillymedia/97-things-every-agile-developer-should-know[oreillymedia/97-things-every-agile-developer-should-know] on GitHub for details. If we accept your work, we'll add you to the contributors chapter.
+
+=== How to Contribute
+
+If you're new to git and GitHub and just want to keep things as simple as possible, this tutorial will give you a quick and easy way to make your contribution.  _If you already have an account, please skip ahead to_ *Copy ("fork") the project repository to your account.* Here are the steps you'll need to follow:
+
+==== Creating a GitHub account
+
+To create and edit a page or to comment on an existing page, you will need to create an account on GitHub. If you don't have one already, then go to the https://github.com/signup/free[GitHub Signup page]. It's free.
+
+image::images/tutorial_github_signup.png[]
+
+GitHub has excellent tools for collaborating and workflow management, and will be the primary way we communicate with you over the course of the project.
+
+==== Copy ("fork") the project repository to your account 
+
+Once you've got an account or if you already have one, fork (GitHub lingo for copying) the main project to your account.  To do this, go to the  https://github.com/oreillymedia/97-things-every-agile-developer-should-know/[97 Things Every Agile Developer Should Know] repository on GitHub and click the "Fork" button at the upper right hand side of the screen.
+
+image::images/tutorial_click_fork.png[] 
+
+The following screen will appear while GitHub copies the repository to your account:
+
+image::images/tutorial_forking.png[]
+
+==== Edit your file using AsciiDoc
+
+Once you've got the file created in your account, you can start editing it at your leisure.  Remember to:
+
+* Mark up your text using http://powerman.name/doc/asciidoc[AsciiDoc], which is similar to Markdown and other basic wiki-like markup formats. Please see link for more information on Asciidoc.
+* Change the line wrapping from "No Wrap" to "Soft Wrap."  Otherwise, all your text will appear on a single line.
+
+To add your chapter, you'll need to create a new file in GitHub.
+To do this, click the + button next to the directory name to create a new file 
+Locate the small \+ sign next to the repository name.  (A tooltip will appear that says "Create a new file here" when you hover your mouse above it.)  Click the "\+" button:
+
+image::images/tutorial_add_a_file.png[]
+
+In the new screen, you'll need to: 
+
+* Enter a name for the file.  Name the file according to the general topic area, and be sure to include the extension ".asciidoc" at the end.  For example, "foo_and_bar.asciidoc".
+* Enter the chapter title in the editing box; it should be prefaced with two "==" signs.  For example, "== Always Foo the Bar"
+* Once you've entered the filename and title, the "Commit Changes" button at the bottom of the screen will activate.  Click the button to save your file. 
+
+You will see something like this: 
+
+image::images/tutorial_naming_a_file.png[]
+
+
+==== Double check your submission and add your biography
+
+Before you submit your request, make sure that you have:
+
+* Inputted your chapter. *Please include your name and title in the commit summary.* 
+* Run a spell check
+* Make sure it's 400-500 words in length
+* Check the formatting to make sure it looks OK
+* Add your name and a short biography
+
+Your biography should look like this:
+
+[source, asciidoc]
+----
+.About the Author
+[NOTE]
+****
+Name:: 
+   Nicola Tesla
+Biography:: 
+   Nicola Tesla is an inventor, electrical engineer, mechanical engineer, physicist, and futurist best known for his contributions to the design of the modern alternating current (AC) electrical supply system.
+****
+----
+
+* Click Commit Changes.
+
+==== Submit a pull request
+
+Once you've completed and double checked your submission, you're ready to submit it back to O'Reilly.  This is done by creating a "pull request" that will trigger the review process. 
+
+
+image::images/tutorial_PullRequest_update.png[]
+
+
+When you submit the pull request, you'll also be able to submit some additional information that will help us track your work:
+
+* A title.  Please enter your name and the title of the contribution.  For example, "Andrew Odewahn: Always Foo the Bar"
+* A comment.  Tell us a little bit about your contribution, as well as anything else you think we should know.
+
+image::images/tutorial_pull_request_submission_form.png[]
+
+==== Engage in back-and-forth
+
+Once you submit your pull request, the project's maintainers can comment on your submission or ask you to make changes before including it into the master file. You will be able to respond to any questions directly under the Discussion section. _Upon your submission, you will be emailed a URL to our release, which you will need to complete._ This release will not take long. Once that has been completed, the maintainer will add your submission. 
+
+If you wish to add an additional chapter, all you'll have to do is go back into your account, go back into the _97 Things_ Respository, and follow the steps starting with *Edit Your File Using Asciidoc*. 
+
+*If you have any questions concerning submitting, please do not hestiate to contact mconnolly@oreilly.com.*
+

@@ -1,3 +1,10 @@
 analytics
+guidelines
+humans
+authors
+names
 effects
+contributors_guidelines
+contributors
+services
 specializations

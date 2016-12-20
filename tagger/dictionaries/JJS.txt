@@ -1,9 +1,15 @@
+smallest
 best
 strongest
+test
 most
 least
-biggest
+latest
 hardest
-longest
+easiest
+highest
+greatest
 worst
+biggest
+longest
 largest

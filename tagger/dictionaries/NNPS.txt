@@ -1,10 +1,5 @@
 analytics
-guidelines
-humans
-authors
-names
+projects
 effects
-contributors_guidelines
-contributors
-services
+physics
 specializations

@@ -1,7 +1,5 @@
-out
 up
 over
+out
+`chsh`
 down
-off
-back
-away

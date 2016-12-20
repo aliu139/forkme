@@ -1,13 +1,13 @@
-vs.
-etc
-i.e.
-param
 [
 =========
 *
+etc
 //
 =
 var
 `bind`
 ]
 memoizationcache.arg
+vs.
+i.e.
+param

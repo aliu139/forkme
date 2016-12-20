@@ -1,9 +1,9 @@
-and
 or
-nor
+and
 but
+var
+memoizationcache.arg
+nor
 avl
 splay
 overall
-var
-memoizationcache.arg

@@ -1,16 +1,19 @@
-were
-wanted
 had
+made
+separated
+binded
+were
+was
+used
+wanted
 came
 did
-made
 left
 wrote
 chose
 assumed
 turned
 thought
-was
 created
 visited
 included
@@ -21,7 +24,6 @@ altered
 assured
 implemented
 felt
-used
 migrated
 got
 ran
@@ -45,5 +47,3 @@ added
 attributed
 tree
 implimented
-separated
-binded

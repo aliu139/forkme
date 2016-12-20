@@ -95,23 +95,18 @@
             <div v-if="submitted">
                 <div class="action">
                     <h3> Fork It! </h3>
-                    <button type="button" class="btn btn-primary"> Copy to Clipboard </button>
+                    <button type="button" class="btn btn-primary" v-on:click="copy"> Copy to Clipboard </button>
                     <button type="button" class="btn btn-primary" v-on:click="reset"> Regenerate </button>
                     <a v-bind:href="fbShareUrl">
                         <button type="button" class="btn btn-primary"> Share </button>
                     </a>
                 </div>
 
-                <div class="markdown">
+                <div class="markdown" id="copyArea">
                     <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
                     <h1>{{titleVal}}</h1>
                     <img v-bind:src="picUrl"> </img>
 
-                    <!--
-                    <h2> Introduction </h2>
-
-                    <p> {{readme["Introduction"]}} </p>
-                    -->
                     <div v-for="item in readme">
                         <h2> {{item.key}} </h2>
                         <p> {{item.data}} </p>
@@ -218,6 +213,16 @@
                     this.submitted = false;
                     this.builtWithList = [];
                     this.readme = "";
+                },
+                copy: function(){
+                    var cText = document.getElementById('copyArea');
+                    var dummy = document.createElement("input");
+                    document.body.appendChild(dummy);
+                    dummy.setAttribute("id", "dummy_id");
+                    document.getElementById("dummy_id").value=cText.innerHTML;
+                    dummy.select();
+                    document.execCommand("copy");
+                    document.body.removeChild(dummy);
                 }
             }
         })

@@ -2,6 +2,7 @@
 // ending with each additional word
 var DELTA_WORD_SENTENCE = 0.008;
 var DELTA_SENTENCE_README = 0.0002;
+var DELTA_SECTION_README = 0.13;
 
 function normalize(arr) {
     var runSum = 0;
@@ -46,7 +47,7 @@ function getNextPart(prev) {
 function getWord(partOfSpeech) {
     var dict = DICTIONARY[partOfSpeech];
     if (!dict){
-        return " ";
+        return "";
     }
     var randIdx = Math.floor(Math.random() * dict.length);
     return dict[randIdx];
@@ -58,7 +59,7 @@ function generateTitle() {
     return noun[0].toUpperCase() + noun.substr(1, 3) + noun2[0].toUpperCase() + noun2.substr(1, noun2.length);
 }
 
-function generateReadme(titleVal) {
+function generateParagraph(titleVal) {
     // Counts up how many words are in a
     // sentence and how many in a word.  
     // Sentence counter resets at end of each sentence.
@@ -93,7 +94,7 @@ function generateReadme(titleVal) {
             sentenceWordCounter += 1;
             randSentenceKey = Math.random();
         }
-        if (isNewSentence){
+        if (isNewSentence && currSentence){
             currSentence = currSentence[0].toUpperCase() + currSentence.substr(1, currSentence.length);
         }
         if (sentenceWordCounter > 0 && sentenceWordCounter < 4 && Math.random() < 0.4){
@@ -112,7 +113,38 @@ function generateReadme(titleVal) {
         currDocEndProb = currDocEndProb + DELTA_SENTENCE_README;
         randDocKey = Math.random();
     }
+    if (README[README.length-1] != '.' && README[README.length-2] != '.'){
+        if (README[README.length-1] == ' '){
+            README = README.substr(0, README.length-1) + '.';
+        }
+        else {
+            README += '.';
+        }
+    }
 
     return README;
+
+}
+
+function generateReadme(titleVal){
+    var idx = 1;
+    var secProb = 0;
+    var randSecKey = Math.random();
+    var retVal = [];
+    retVal[0] = {
+        key: "Introduction",
+        data: generateParagraph(titleVal)
+    };
+    while (randSecKey > secProb){
+        secProb += DELTA_SECTION_README;
+        randSecKey = Math.random();
+        var newParagraph = generateParagraph(titleVal);
+        let newEntry = {};
+        newEntry.key = getWord("NN");
+        newEntry.key = newEntry.key[0].toUpperCase() + newEntry.key.substr(1, newEntry.length);
+        newEntry.data = newParagraph;
+        retVal[idx++] = newEntry;
+    }
+    return retVal;
 
 }

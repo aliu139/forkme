@@ -5,6 +5,7 @@ import json
 import os
 
 TAGGER_IGNORE = ['\'', '-', '^', '&', '>']
+TAGGER_TYPE_IGNORE = ['$', '\'', '(', ')', ',', '--', '.', ':', 'SYM', '``', '\'\'']
 
 if (len(sys.argv) > 1):
     print("tagging " + sys.argv[1])
@@ -27,6 +28,8 @@ word_ret_arr = {}
 
 prev_key = newArr.pop(0)[1]
 for item in newArr:
+    if (item[1] in TAGGER_TYPE_IGNORE):
+        continue
     curr_key = item[1]
     word = item[0]
     if prev_key not in prob_ret_arr:

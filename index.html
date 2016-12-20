@@ -107,9 +107,15 @@
                     <h1>{{titleVal}}</h1>
                     <img v-bind:src="picUrl"> </img>
 
+                    <!--
                     <h2> Introduction </h2>
 
-                    <p> {{readme}} </p>
+                    <p> {{readme["Introduction"]}} </p>
+                    -->
+                    <div v-for="item in readme">
+                        <h2> {{item.key}} </h2>
+                        <p> {{item.data}} </p>
+                    </div>
 
                     <h2> Examples </h2>
 

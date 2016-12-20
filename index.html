@@ -101,6 +101,9 @@
                         <button type="button" class="btn btn-primary"> Share </button>
                     </a>
                 </div>
+                <div style="display: none">
+                    <p id="copyArea">{{markdownData}}</p>
+                </div>
 
                 <div class="markdown" id="copyArea">
                     <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
@@ -192,6 +195,7 @@
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
                     this.readme = generateReadme(this.titleVal);
+                    this.markdownData = markdownConvert(this.titleVal, this.readme, this.builtWithList);
 
                     let greyTemp = (window.screen.width > 400) ? "http://loremflickr.com/g/320/240/" : "http://loremflickr.com/g/150/150/";
                     let normalTemp =  (window.screen.width > 400) ? "http://loremflickr.com/320/240/" : "http://loremflickr.com/150/150/";
@@ -212,6 +216,7 @@
                     this.fbShareUrl = "https://www.facebook.com/sharer.php?caption=[caption]&description=[description]&u=[website]&picture=[image-url]";
                     this.submitted = false;
                     this.builtWithList = [];
+                    this.markdownData = "";
                     this.readme = "";
                 },
                 copy: function(){

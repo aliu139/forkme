@@ -3,7 +3,6 @@
 var DELTA_WORD_SENTENCE = 0.008;
 var DELTA_SENTENCE_README = 0.0002;
 var DELTA_SECTION_README = 0.13;
-var DELTA_CODE_SNIPPET = 0.02;
 var CHANCE_OF_SNIPPET = 0.6;
 
 function normalize(arr) {
@@ -46,14 +45,10 @@ function getNextPart(prev) {
     return curr[0];
 }
 
-function getWord(partOfSpeech, snippetLibrary) {
+function getWord(partOfSpeech) {
     var dict = DICTIONARY[partOfSpeech];
     if (!dict){
-        if (!snippetLibrary){
-            return "";
-        }
-        var randIdx = Math.floor(Math.random() * snippetLibrary.length);
-        return snippetLibrary[randIdx];
+        return "";
     }
     var randIdx = Math.floor(Math.random() * dict.length);
     return dict[randIdx];
@@ -134,12 +129,10 @@ function generateParagraph(titleVal) {
 
 function generateCodeSnippet(snippetLibrary){
     var retVal = "";
-    var probEnd = 0;
-    var randKey = Math.random();
-    while (randKey > probEnd){
-        probEnd += DELTA_CODE_SNIPPET;
-        randKey = Math.random();
-        retVal+=getWord("CODE_SNIPPETS", snippetLibrary) + "\r";
+    var randKey = Math.ceil(Math.random()*40);
+    var startIdx = Math.floor(Math.random() * snippetLibrary.length);
+    for (var i = startIdx; i < Math.min(startIdx + randKey, snippetLibrary.length); i++){
+        retVal+= snippetLibrary[i]+ "\r\n";
     }
     return retVal;
 }

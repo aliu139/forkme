@@ -161,7 +161,7 @@
 <script>
     Promise.all(load_arr).then(value => {
         var builtWithArr = Object.keys(value[0]);
-        var codeSnippets = Object.keys(value[1]);
+        var codeSnippets = value[1];
 
         DICTIONARY = {}
         for(var i = 2; i < value.length-1; i++){

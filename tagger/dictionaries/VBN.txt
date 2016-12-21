@@ -42,13 +42,8 @@ known
 filled
 [
 fun
-finished
-inspired
 been
 made
-generated
-fixed
-**merged
 named
 dedicated
 listed
@@ -60,6 +55,7 @@ released
 added**
 labeled
 merged
+fixed
 unauthenticated
 associated
 pulled
@@ -136,6 +132,7 @@ supposed
 affected
 searched
 sized
+generated
 added
 incrimented
 learned

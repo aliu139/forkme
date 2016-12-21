@@ -155,6 +155,10 @@ function markdownConvert(title, readme, builtWith){
         console.log(readme[i].data);
         generated += readme[i].data + "\r\r";
     }
+    generated+="# Examples\r```\r";
+    generated+="var foo = true;\r\rif(!foo){\r    return 5;\r}\relse{\r    return 6;\r}\r\r";
+    generated+="```\r";
+
     generated+= "## Built With\n\n";
     for (var j = 0; j < builtWith.length; j++){
         generated+="* " + builtWith[j] + "\r";

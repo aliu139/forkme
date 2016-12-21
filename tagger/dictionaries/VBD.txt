@@ -1,4 +1,3 @@
-======================
 placed
 setup
 *
@@ -7,17 +6,15 @@ made
 separated
 binded
 were
-<
 was
 homebrew
-@
+installed
 established
 used
 licensed
 attributed
 got
 merged
-**implemented
 read
 **advanced
 appended
@@ -28,8 +25,6 @@ found
 satisfied
 said
 received
-=
-installed
 needed
 did
 created

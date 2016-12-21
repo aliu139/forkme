@@ -3,10 +3,10 @@ or
 plus
 but
 `make
-<
-[
+**or**
 var
 memoizationcache.arg
+so
 **
 nor
 avl

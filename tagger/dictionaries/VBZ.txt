@@ -28,16 +28,13 @@ takes
 marks
 understands
 follows
-<
 ]
-dotfiles
-files
-sh
 conforms
 antigen
 pygments
 comes
 needs
+dotfiles
 generates
 splits
 allows
@@ -68,6 +65,7 @@ triggers
 clicks
 receives
 occurs
+messes
 stays
 implements
 dominoes
@@ -77,6 +75,7 @@ leads
 computes
 realises
 displays
+emits
 acts
 produces
 data

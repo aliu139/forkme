@@ -163,5 +163,47 @@
     },
     "Zepto": {
         "weight": 1
+    },
+    "Azure": {
+        "weight": 1
+    },
+    "TOR": {
+        "weight": 1
+    },
+    "Pied Piper": {
+        "weight": 1
+    },
+    "Google Maps API": {
+        "weight": 1
+    },
+    "Ruby": {
+        "weight": 1
+    },
+    "ASP.NET": {
+        "weight": 1
+    },
+    "Silverlight": {
+        "weight": 1
+    },
+    "Adobe Flash": {
+        "weight": 1
+    },
+    "Whitespace": {
+        "weight": 1
+    },
+    "Brainf***": {
+        "weight": 1
+    },
+    "Pascal": {
+        "weight": 1
+    },
+    "LISP": {
+        "weight": 1
+    },
+    "ALGOL58": {
+        "weight": 1
+    },
+    "FORTRAN": {
+        "weight": 1
     }
 }

@@ -146,18 +146,18 @@ function generateReadme(titleVal){
         retVal[idx++] = newEntry;
     }
     return retVal;
-
 }
 
 function markdownConvert(title, readme, builtWith){
-    var generated = "# " + title + "\n\n";
+    var generated = "# " + title + "\r\r";
     for (var i = 0; i < readme.length; i++){
-        generated += "## " + readme[i].key + "\n";
-        generated += readme[i].data + "\n\n";
+        generated += "## " + readme[i].key + "\r";
+        console.log(readme[i].data);
+        generated += readme[i].data + "\r\r";
     }
     generated+= "## Built With\n\n";
     for (var j = 0; j < builtWith.length; j++){
-        generated+="* " + builtWith[j] + "\n";
+        generated+="* " + builtWith[j] + "\r";
     }
     return generated;
 

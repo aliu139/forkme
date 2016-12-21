@@ -101,11 +101,7 @@
                         <button type="button" class="btn btn-primary"> Share </button>
                     </a>
                 </div>
-                <div style="display: none">
-                    <p id="copyArea">{{markdownData}}</p>
-                </div>
-
-                <div class="markdown" id="copyArea">
+                <div class="markdown">
                     <!--<img src="http://www.bootbundle.com/bundle/mockups/imac-template.png"> </img>-->
                     <h1>{{titleVal}}</h1>
                     <img v-bind:src="picUrl"> </img>
@@ -220,11 +216,10 @@
                     this.readme = "";
                 },
                 copy: function(){
-                    var cText = document.getElementById('copyArea');
-                    var dummy = document.createElement("input");
+                    var dummy = document.createElement("textarea");
                     document.body.appendChild(dummy);
                     dummy.setAttribute("id", "dummy_id");
-                    document.getElementById("dummy_id").value=cText.innerHTML;
+                    document.getElementById("dummy_id").value=this.markdownData;
                     dummy.select();
                     document.execCommand("copy");
                     document.body.removeChild(dummy);

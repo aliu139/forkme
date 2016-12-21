@@ -165,8 +165,8 @@
 
         DICTIONARY = {}
         for(var i = 2; i < value.length-1; i++){
-            DICTIONARY[PROB_KEYS_AUGMENTED[i-1]] = value[i];
-            DICTIONARY[PROB_KEYS_AUGMENTED[i-1]].pop();
+            DICTIONARY[PROB_KEYS_AUGMENTED[i-2]] = value[i];
+            DICTIONARY[PROB_KEYS_AUGMENTED[i-2]].pop();
         }
 
         console.log(DICTIONARY);

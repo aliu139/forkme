@@ -1,22 +1,14 @@
 
-<img src="/images/logo/re-frame_128w.png?raw=true">
-
 ## Derived Values, Flowing
 
-> This, milord, is my family's axe. We have owned it for almost nine hundred years, see. Of course,
+ This, milord, is my family's axe. We have owned it for almost nine hundred years, see. Of course,
 sometimes it needed a new blade. And sometimes it has required a new handle, new designs on the
 metalwork, a little refreshing of the ornamentation ... but is this not the nine hundred-year-old
 axe of my family? And because it has changed gently over time, it is still a pretty good axe,
 y'know. Pretty good.
 
-> -- Terry Pratchett, The Fifth Elephant <br>
-> &nbsp;&nbsp;&nbsp; reflecting on identity, flow and derived values
-
-
-[![Clojars Project](https://img.shields.io/clojars/v/re-frame.svg)](https://clojars.org/re-frame)
-[![GitHub license](https://img.shields.io/github/license/Day8/re-frame.svg)](license.txt)
-[![Circle CI](https://circleci.com/gh/Day8/re-frame/tree/develop.svg?style=shield&circle-token=:circle-ci-badge-token)](https://circleci.com/gh/Day8/re-frame/tree/develop)
-[![Circle CI](https://circleci.com/gh/Day8/re-frame/tree/master.svg?style=shield&circle-token=:circle-ci-badge-token)](https://circleci.com/gh/Day8/re-frame/tree/master)
+ -- Terry Pratchett, The Fifth Elephant 
+ &nbsp;&nbsp;&nbsp; reflecting on identity, flow and derived values
 
 
 ## Why Should You Care?
@@ -46,9 +38,6 @@ Perhaps:
     xkcd reference (soon) and a hilarious, insiders-joke T-shirt,
     ideal for conferences (in design).  What could possibly go wrong?
 
-[OM]:https://github.com/swannodette/om
-[Hoplon]:http://hoplon.io/
-[Pedestal App]:https://github.com/pedestal/pedestal-app
 
 ## re-frame
 
@@ -74,7 +63,6 @@ provide - hence a tag line of "Derived Values, Flowing".
 
 Remember this diagram from school? The water cycle, right?
 
-<img height="350px" align="right" src="/images/the-water-cycle.png?raw=true">
 
 Two distinct stages, involving water in different phases, being acted upon
 by different forces: gravity working one way, evaporation/convection the other.
@@ -95,7 +83,6 @@ you to understand re-frame, is **practically proof** it does physics.
 
 ### It is a 6-domino cascade
 
-<img align="right" src="/images/Readme/Dominoes-small.jpg?raw=true">
 
 Computationally, each iteration of the loop involves a
 six domino cascade.
@@ -134,7 +121,6 @@ change, but sometimes the outside world must also be effected
 The descriptions of `effects` are realised (actioned). This is where mutations happens.
 
 Now, to a functional programmer, `effects` are scary in a 
-[xenomorph kind of way](https://www.google.com.au/search?q=xenomorph).
 Nothing messes with functional purity
 quite like the need for side effects. On the other hand, `effects` are 
 marvelous because they move the app forward. Without them, an app stays stuck in one state forever,
@@ -179,7 +165,6 @@ be showing right now.
 
 ### Domino 4 - Query
 
-<img align="right" src="/images/Readme/6dominoes.png?raw=true">
 
 Domino 4 is about extracting data from "app state", and providing it 
 in the right format for view functions (which are Domino 5).
@@ -237,7 +222,6 @@ after those dominoes.
 
 ## As Code Fragments
 
-<img align="right" src="/images/Readme/todolist.png?raw=true">
 
 Let's take this domino narrative further and introduce code fragments.
 
@@ -247,16 +231,13 @@ just clicked the "delete" button next to the 3rd item in the list.
 In response, what happens within this imaginary re-frame app? Here's a sketch 
 of the six domino cascade:
 
-> Don't expect 
+ Don't expect 
 to completely grok the terse code presented below. We're still at 30,000 feet. Details later. 
 
 ### Code For Domino 1
 
 The delete button for that 3rd item will have an `on-click` handler (function) which looks
 like this:
-```clj
- #(re-frame.core/dispatch [:delete-item 2486])
-```
 
 `dispatch` emits an `event`.
 
@@ -274,12 +255,6 @@ This handler function, `h`, takes two arguments: a `coeffects` map
 which holds the current state of the world (including app state),
 and the `event`. It must return a map of `effects` - a description 
 of how the world should change. Here's a sketch (we are at 30,000 feet):
-```clj
-(defn h 
- [{:keys [db]} event]                    ;; args:  db from coeffect, event
- (let [item-id (second event)]           ;; extract id from event vector
-   {:db  (dissoc-in db [:items item-id])})) ;; effect is change db
-```
 
 There are mechanisms in re-frame (beyond us here) whereby you can place
 all necessary aspects of the world into that first `coeffects` argument, on a 
@@ -289,17 +264,11 @@ is one aspect of the world which is invariably needed.
 
 On program startup, `h` would have been 
 associated with `:delete-item` `events` like this:
-```clj
-(re-frame.core/reg-event-fx  :delete-item  h)
-```
 Which says "when you see a `:delete-item` event, use `h` to handle it".
 
 ### Code For Domino 3
 
 An `effect handler` (function) actions the `effects` returned by `h`:
-```clj
-{:db  (dissoc-in db [:items item-id])}
-```
 So that's a map. The keys identify the required kinds of `effect`, and the values 
 supply further details. This map only has one key, so there's only one effect.  
 
@@ -320,17 +289,9 @@ itself computing the list of items.
 Because the items 
 are stored in app state, there's not a lot to compute in this case. This 
 subscription acts more like an accessor.
-```clj
-(defn query-fn
-  [db _]         ;; db is current app state
-  (:items db))   ;; not much of a materialised view
-```
 
 On program startup, such a query-fn must be associated with an id, 
 (for reasons obvious in the next domino) like this:
-```clj
-(re-frame.core/reg-sub  :query-items  query-fn)
-```
 Which says "when you see a query (subscribe) for `:query-items`, use `query-fn` to handle it".
 
 ### Code For Domino 5
@@ -341,14 +302,6 @@ to "items", is called automatically (reactively) to re-compute DOM.
 It produces 
 a hiccup-formatted data structure describing the DOM nodes required (no DOM nodes 
 for the deleted item, obviously, but otherwise the same DOM as last time).
-
-```clj
-(defn items-view
-  []
-  (let [items  (subscribe [:query-items])]  ;; source items from app state
-    [:div (map item-render @items]))   ;; assume item-render already written
-```
-
 Notice how `items` is "sourced" from "app state" via `subscribe`. It is called with a query id
 to identify what data it needs.   
 
@@ -419,16 +372,9 @@ Data - that's the way we roll.
 ## It is mature and proven in the large
 
 re-frame was released in early 2015, and has since [been](https://www.fullcontact.com)
-successfully
-[used](https://www.nubank.com.br) 
-by
-[quite](http://open.mediaexpress.reuters.com/)
-a 
-[few](https://rokt.com/) companies and
 individuals to build complex apps, many running beyond 40K lines of
 ClojureScript.
 
-<img align="right" src="/images/scale-changes-everything.jpg?raw=true">
 
 **Scale changes everything.** Frameworks
 are just pesky overhead at small scale - measure them instead by how they help
@@ -455,33 +401,21 @@ but the core concepts, and even basic coding techniques, are now known to you.
 
 Next you need to read read the other three articles in the [Introduction section](/docs#introduction):
 
-* [Application State](/docs/ApplicationState.md)
-* [Code Walkthrough](/docs/CodeWalkthrough.md)
-* [Mental Model Omnibus](/docs/MentalModelOmnibus.md)
-
 This will get your knowledge to about 70%. The
 final 30% will come incrementally with use, and by reading the other
 tutorials (of which there's a few).
 
-You can also experiment with these examples: <br>
-https://github.com/Day8/re-frame/tree/master/examples
+You can also experiment with these examples: 
 
-Use a template to create your own project: <br>
-Client only:  https://github.com/Day8/re-frame-template  <br>
-Full Stack: http://www.luminusweb.net/
+Use a template to create your own project: 
 
-Use these resources: <br>
-https://github.com/Day8/re-frame/blob/develop/docs/External-Resources.md
+Use these resources: 
 
 ### T-Shirt Unlocked
 
 Good news.  If you've read this far,
 your insiders T-shirt will be arriving soon - it will feature turtles, 
-[xkcd](http://xkcd.com/1416/) and something about "data all the way down". 
+[xkcd] and something about "data all the way down". 
 But we're still working on the hilarious caption bit. Open a
 repo issue with a suggestion.
 
-
-[SPAs]:http://en.wikipedia.org/wiki/Single-page_application
-[SPA]:http://en.wikipedia.org/wiki/Single-page_application
-[Reagent]:http://reagent-project.github.io/

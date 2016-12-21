@@ -1,16 +1,12 @@
 Node.JS Chat
-============
-[![GitHub Stars](https://img.shields.io/github/stars/IgorAntun/node-chat.svg)](https://github.com/IgorAntun/node-chat/stargazers) [![GitHub Issues](https://img.shields.io/github/issues/IgorAntun/node-chat.svg)](https://github.com/IgorAntun/node-chat/issues) [![Current Version](https://img.shields.io/badge/version-1.0.7-green.svg)](https://github.com/IgorAntun/node-chat) [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://igorantun.com/chat) [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/IgorAntun/node-chat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 This is a node.js chat application powered by SockJS and Express that provides the main functions you'd expect from a chat, such as emojis, private messages, an admin system, etc.
 
-![Chat Preview](http://i.imgur.com/lgRe8z4.png)
 
 ## Demo
 You can test a fully working live demo at ~~https://igorantun.com/chat~~ *(demo currently offline)*
 - Type `/help` to get a list of the available chat commands
 
----
 
 ## Features
 - Material Design
@@ -21,12 +17,6 @@ You can test a fully working live demo at ~~https://igorantun.com/chat~~ *(demo 
 - Ability to kick/ban users (for admins)
 - See other user's IPs (for admins)
 - Other awesome features yet to be implemented
-
-.
-![User Features](http://i.imgur.com/WbF1fi2.png)
-
-.
-![Admin Features](http://i.imgur.com/xQFaadt.png)
 
 
 ####There are 3 admin levels:
@@ -53,6 +43,5 @@ To give yourself administrator permissions on the chat, you will have to type `/
 ---
 
 ## License
->You can check out the full license [here](https://github.com/IgorAntun/node-chat/blob/master/LICENSE)
 
 This project is licensed under the terms of the **MIT** license.

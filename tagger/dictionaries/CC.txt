@@ -1,8 +1,13 @@
-or
 and
+or
+plus
 but
+`make
+<
+[
 var
 memoizationcache.arg
+**
 nor
 avl
 splay

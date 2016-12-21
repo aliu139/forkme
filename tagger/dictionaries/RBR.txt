@@ -1,4 +1,8 @@
 better
 more
 less
+faster
+longer
+easier
 harder
+localstore

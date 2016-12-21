@@ -1,2 +1,5 @@
+install
 all
+*what’s
+`milestone`
 such

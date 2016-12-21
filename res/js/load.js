@@ -27,9 +27,10 @@ function waitFor(path) {
 }
 
 var builtWith = waitForLoad("res/dictionaries/technologies.json");
+var codeSnippets = waitFor("res/dictionaries/CODE_SNIPPETS.txt");
 
 var PROB_KEYS_AUGMENTED = ["CC", "DT", "IN", "JJ", "JJR", "MD", "NN", "NNP", "NNS", "PRP", "RB", "RBR", "RP", "TO", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WRB"];
-var load_arr = [builtWith];
+var load_arr = [builtWith, codeSnippets];
 for(key in PROB_KEYS_AUGMENTED){
     //console.log("tagger/dictionaries/" + PROB_KEYS_AUGMENTED[key] + ".txt");
     load_arr.push(waitFor("tagger/dictionaries/" + PROB_KEYS_AUGMENTED[key] + ".txt"));

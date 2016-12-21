@@ -108,9 +108,15 @@
 
                     <div v-for="item in readme">
                         <h2> {{item.key}} </h2>
-                        <p> {{item.data}} </p>
+                        <pre v-if="item.key=='Example'">
+                        <code>
+                        {{item.data}}
+                        </code>
+                        </pre>
+                        <p v-else> {{item.data}} </p>
                     </div>
 
+                    <!--
                     <h2> Examples </h2>
 
                     <pre><code>
@@ -123,7 +129,7 @@
                     return 6;
                 }
                 </code></pre>
-
+                -->
                     <h2> Built With: </h2>
                     <ul>
                         <li v-for="item in builtWithList"> {{item}}</li>
@@ -155,9 +161,10 @@
 <script>
     Promise.all(load_arr).then(value => {
         var builtWithArr = Object.keys(value[0]);
+        var codeSnippets = Object.keys(value[1]);
 
         DICTIONARY = {}
-        for(var i = 1; i < value.length-1; i++){
+        for(var i = 2; i < value.length-1; i++){
             DICTIONARY[PROB_KEYS_AUGMENTED[i-1]] = value[i];
             DICTIONARY[PROB_KEYS_AUGMENTED[i-1]].pop();
         }
@@ -190,7 +197,7 @@
                     this.titleVal = (this.titleVal == "") ? generateTitle() : this.titleVal;
                     this.submitted = true;
                     this.builtWithList = _.sample(builtWithArr, 5);
-                    this.readme = generateReadme(this.titleVal);
+                    this.readme = generateReadme(this.titleVal, codeSnippets);
                     this.markdownData = markdownConvert(this.titleVal, this.readme, this.builtWithList);
 
                     let greyTemp = (window.screen.width > 400) ? "http://loremflickr.com/g/320/240/" : "http://loremflickr.com/g/150/150/";

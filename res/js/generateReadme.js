@@ -3,6 +3,8 @@
 var DELTA_WORD_SENTENCE = 0.008;
 var DELTA_SENTENCE_README = 0.0002;
 var DELTA_SECTION_README = 0.13;
+var DELTA_CODE_SNIPPET = 0.02;
+var CHANCE_OF_SNIPPET = 0.6;
 
 function normalize(arr) {
     var runSum = 0;
@@ -44,10 +46,14 @@ function getNextPart(prev) {
     return curr[0];
 }
 
-function getWord(partOfSpeech) {
+function getWord(partOfSpeech, snippetLibrary) {
     var dict = DICTIONARY[partOfSpeech];
     if (!dict){
-        return "";
+        if (!snippetLibrary){
+            return "";
+        }
+        var randIdx = Math.floor(Math.random() * snippetLibrary.length);
+        return snippetLibrary[randIdx];
     }
     var randIdx = Math.floor(Math.random() * dict.length);
     return dict[randIdx];
@@ -126,7 +132,19 @@ function generateParagraph(titleVal) {
 
 }
 
-function generateReadme(titleVal){
+function generateCodeSnippet(snippetLibrary){
+    var retVal = "";
+    var probEnd = 0;
+    var randKey = Math.random();
+    while (randKey > probEnd){
+        probEnd += DELTA_CODE_SNIPPET;
+        randKey = Math.random();
+        retVal+=getWord("CODE_SNIPPETS", snippetLibrary) + "\r";
+    }
+    return retVal;
+}
+
+function generateReadme(titleVal, snippetLibrary){
     var idx = 1;
     var secProb = 0;
     var randSecKey = Math.random();
@@ -144,6 +162,15 @@ function generateReadme(titleVal){
         newEntry.key = newEntry.key[0].toUpperCase() + newEntry.key.substr(1, newEntry.length);
         newEntry.data = newParagraph;
         retVal[idx++] = newEntry;
+
+        // Do we add a code snippet?
+        if (Math.random() < CHANCE_OF_SNIPPET){
+            retVal[idx++] = {
+                key: "Example",
+                data: generateCodeSnippet(snippetLibrary)
+            };
+        }
+
     }
     return retVal;
 }
@@ -152,12 +179,15 @@ function markdownConvert(title, readme, builtWith){
     var generated = "# " + title + "\r\r";
     for (var i = 0; i < readme.length; i++){
         generated += "## " + readme[i].key + "\r";
-        console.log(readme[i].data);
-        generated += readme[i].data + "\r\r";
+        if (readme[i].key == "Example"){
+            generated += "```\r" + readme[i].data + "```\r\r";
+        } else {
+            generated += readme[i].data + "\r\r";
+        }
     }
-    generated+="# Examples\r```\r";
-    generated+="var foo = true;\r\rif(!foo){\r    return 5;\r}\relse{\r    return 6;\r}\r\r";
-    generated+="```\r";
+    //generated+="# Examples\r```\r";
+    //generated+="var foo = true;\r\rif(!foo){\r    return 5;\r}\relse{\r    return 6;\r}\r\r";
+    //generated+="```\r";
 
     generated+= "## Built With\n\n";
     for (var j = 0; j < builtWith.length; j++){

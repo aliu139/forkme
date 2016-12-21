@@ -23,3 +23,17 @@ Just open it up in a browser, and click through the expeience!
 
 # Inspired By
 Jared Wong's original [Pitbull Generator](https://github.com/techlover10/PitbullGenerator)
+
+# Data Credits
+Code snippets courtesy of [FizzBuzz Enterprise Edition](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition)
+
+README data sources include the following:
+[aimeos TYPO3](https://github.com/aimeos/aimeos-typo3/blob/master/README.md)
+[AngularJS](https://github.com/angular/angular.js/blob/master/README.md)
+[Enterprise FizzBuzz](https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition/blob/master/README.md)
+[dotfiles](https://github.com/b4b4r07/dotfiles/blob/master/README.md)
+[Github Changelog Generator](https://github.com/skywinder/github-changelog-generator/blob/master/README.md)
+[Node.JS Chat](https://github.com/IgorAntun/node-chat/blob/master/README.md)
+[React - Basic Theoretical Concepts](https://github.com/reactjs/react-basic/blob/master/README.md)
+[re-frame](https://github.com/Day8/re-frame/blob/master/README.md)
+[University of Washington README examples](https://courses.cs.washington.edu/courses/cse326/02wi/homework/hw5/good-readmes.html)

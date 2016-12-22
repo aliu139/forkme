@@ -53,7 +53,7 @@ def generate_tags(filetextraw):
     
             curr_dict = open('trump/' + dict + '.txt', 'w')
             for word in curr_arr:
-                curr_dict.write(word + '\n')
+                curr_dict.write((word + '\n').encode('UTF-8'))
     # save probabilities
     prob_output = json.dumps(prob_ret_arr)
     out_prob = open('trump/probability.data', 'w')

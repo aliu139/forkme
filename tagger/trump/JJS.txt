@@ -15,3 +15,7 @@ darkest
 honest
 likeliest
 fullest
+quickest
+lowest
+toughest
+highest

@@ -10,3 +10,6 @@ tougher
 less
 lower
 higher
+easier
+greater
+smaller

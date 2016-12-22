@@ -34,6 +34,8 @@ var load_arr = [builtWith, codeSnippets];
 for(key in PROB_KEYS_AUGMENTED){
     //console.log("tagger/dictionaries/" + PROB_KEYS_AUGMENTED[key] + ".txt");
     load_arr.push(waitFor("tagger/dictionaries/" + PROB_KEYS_AUGMENTED[key] + ".txt"));
+    load_arr.push(waitFor("tagger/trump/" + PROB_KEYS_AUGMENTED[key] + ".txt"));
 }
 
 load_arr.push(waitForLoad("tagger/dictionaries/probability.data"))
+load_arr.push(waitForLoad("tagger/trump/probability.data"))

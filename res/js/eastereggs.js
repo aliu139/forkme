@@ -9,3 +9,10 @@ cheet('$ h a t t', function () {
 cheet('m u a h', function () {
   alert('<3 么么哒');
 });
+
+cheet('t r u m p', function () {
+  alert('Trump mode activated!');
+  TRUMP_MODE = true;
+  CHANCE_OF_SNIPPET = 0;
+});
+

@@ -163,15 +163,19 @@
         var builtWithArr = Object.keys(value[0]);
         var codeSnippets = value[1];
 
-        DICTIONARY = {}
-        for(var i = 2; i < value.length-1; i++){
-            DICTIONARY[PROB_KEYS_AUGMENTED[i-2]] = value[i];
-            DICTIONARY[PROB_KEYS_AUGMENTED[i-2]].pop();
+        DICTIONARY = {};
+        TRUMP_DICT = {};
+        for(var i = 2; i < value.length-2; i+=2){
+            DICTIONARY[PROB_KEYS_AUGMENTED[Math.floor(i/2)-1]] = value[i];
+            DICTIONARY[PROB_KEYS_AUGMENTED[Math.floor(i/2)-1]].pop();
+            TRUMP_DICT[PROB_KEYS_AUGMENTED[Math.floor(i/2)-1]] = value[i+1];
+            TRUMP_DICT[PROB_KEYS_AUGMENTED[Math.floor(i/2)-1]].pop();
         }
 
         console.log(DICTIONARY);
 
-        PROBABILITIES = value[value.length-1];
+        PROBABILITIES = value[value.length-2];
+        TRUMP_PROBABILITIES = value[value.length-1];
 
         console.log(PROBABILITIES);
 

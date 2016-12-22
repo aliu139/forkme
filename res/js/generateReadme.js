@@ -4,6 +4,7 @@ var DELTA_WORD_SENTENCE = 0.008;
 var DELTA_SENTENCE_README = 0.0002;
 var DELTA_SECTION_README = 0.13;
 var CHANCE_OF_SNIPPET = 0.6;
+var TRUMP_MODE = false;
 
 function normalize(arr) {
     var runSum = 0;
@@ -27,10 +28,19 @@ var PROB_KEYS = ["CC", "DT", "IN", "JJ", "JJR", "MD", "NN", "NNP", "NNS", "PRP",
 function getNextPart(prev) {
     var prevIdx = PROB_KEYS.indexOf(prev);
     var rand = Math.random();
-    var curr = Object.keys(PROBABILITIES[prev]);
+    var curr;
+    if (TRUMP_MODE){
+        curr = Object.keys(TRUMP_PROBABILITIES[prev]);
+    } else {
+        curr = Object.keys(PROBABILITIES[prev]);
+    }
     var currVal = [];
     for(key in curr){
-        currVal.push(PROBABILITIES[prev][curr[key]]);
+        if (PROBABILITIES[prev][curr[key]]){
+            currVal.push(PROBABILITIES[prev][curr[key]]);
+        } else {
+            currVal.push(0);
+        }
     }
     // console.log(curr);
     // console.log(currVal);
@@ -46,7 +56,12 @@ function getNextPart(prev) {
 }
 
 function getWord(partOfSpeech) {
-    var dict = DICTIONARY[partOfSpeech];
+    var dict;
+    if (TRUMP_MODE){
+        dict = TRUMP_DICT[partOfSpeech];
+    } else {
+        dict = DICTIONARY[partOfSpeech];
+    }
     if (!dict){
         return "";
     }

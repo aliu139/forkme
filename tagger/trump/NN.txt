@@ -10,7 +10,6 @@ gon
 country
 trouble
 time
-beating
 trade
 deal
 anything
@@ -34,7 +33,6 @@ oil
 military
 youre
 somebody
-theyre
 league
 place
 nothing
@@ -87,7 +85,6 @@ example
 circuit
 making
 office
-meeting
 support
 currency
 level
@@ -104,13 +101,13 @@ doctor
 plan
 something
 government
-dealt
 life
 politician
 chance
 leader
 manufacturing
 care
+vet
 cheerleader
 spirit
 right
@@ -130,7 +127,6 @@ loan
 dollar
 couple
 bill
-dont
 negotiator
 one
 killer
@@ -156,6 +152,7 @@ crap
 minute
 anyone
 tariff
+secret
 apartment
 chunk
 war
@@ -207,7 +204,6 @@ debt
 reconsider
 weve
 choice
-pay
 fortune
 victory
 junk
@@ -221,9 +217,7 @@ wealth
 election
 thank
 reporter
-proud
 speaking
-tired
 spending
 education
 capita
@@ -241,17 +235,17 @@ accounting
 firm
 theyve
 statement
-use
+asset
 estate
 increase
 ofnet
 total
 drain
 reason
-telling
 today
 return
 wall
+pay
 guy
 concept
 negotiation
@@ -460,12 +454,12 @@ police
 believing
 future
 heart
+let
 fun
 tonight
-coverage
-wont
 rally
 address
+meeting
 importance
 flow
 love
@@ -510,6 +504,8 @@ report
 homicide
 voucher
 opponent
+theyre
+audience
 trump
 idea
 matter
@@ -531,6 +527,7 @@ horse
 region
 period
 quagmire
+meet
 input
 surveillance
 manpower
@@ -542,14 +539,14 @@ operation
 credit
 press
 term
-whatsoever
+what'soever
+street
 deportation
 g
 direction
 brain
 none
 reentry
-proposing
 passage
 legislation
 cooperation
@@ -613,6 +610,7 @@ search
 expiration
 magnet
 extent
+use
 site
 form
 food
@@ -627,7 +625,6 @@ set
 likelihood
 ability
 sufficient
-street
 merit
 skill
 proficiency
@@ -641,6 +638,7 @@ ancient
 auto
 pilot
 picture
+proud
 dividend
 inner
 route
@@ -663,7 +661,6 @@ hearing
 violent
 chaos
 lawlessness
-gotten
 usa
 child
 da
@@ -677,11 +674,11 @@ beach
 hi
 murderer
 jail
-voting
 mother
 cousin
 daughter
 collision
+secure
 evening
 mission
 role

@@ -2,12 +2,10 @@ didnt
 know
 have
 are
-dont
-say
+do
 kill
 beat
 send
-do
 assume
 speak
 tell
@@ -24,13 +22,13 @@ think
 believe
 cant
 look
+say
 hire
 hear
 come
 heard
 wouldnt
 watch
-fine
 control
 am
 arent
@@ -40,7 +38,6 @@ owe
 take
 back
 get
-wont
 dump
 buy
 devalue
@@ -50,11 +47,10 @@ tariff
 sell
 own
 go
-understand
 behave
 hate
-theyre
 use
+understand
 doesnt
 remember
 run
@@ -75,6 +71,7 @@ spread
 destabilize
 set
 abuse
+darkest
 end
 stand
 cheat
@@ -83,7 +80,6 @@ like
 respect
 agree
 expect
-report
 spend
 serve
 talk
@@ -92,8 +88,6 @@ draw
 constantly
 support
 represent
-thats
-sure
 catch
 deserve
 live
@@ -111,8 +105,6 @@ pose
 exist
 write
 remain
-fix
-protect
 havent
 donate
 declare

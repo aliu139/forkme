@@ -13,12 +13,16 @@ hit
 done
 hed
 replaced
+watched
+dealt
 controlled
 abandoned
 elected
+heard
 made
 talented
 gotten
+supposed
 located
 overrated
 buffaloed
@@ -35,6 +39,8 @@ loaded
 based
 tired
 ripped
+got
+employed
 filed
 reported
 tapped
@@ -53,7 +59,6 @@ ruled
 spent
 perfected
 entitled
-employed
 signed
 visited
 caused
@@ -90,7 +95,7 @@ sacrificed
 abused
 rebuilt
 raised
-supposed
+landed
 returned
 realized
 known
@@ -111,7 +116,6 @@ deported
 separated
 loved
 engaged
-heard
 answered
 crafted
 led
@@ -137,7 +141,6 @@ provided
 born
 brutalized
 suspended
-got
 resettled
 doubled
 admitted

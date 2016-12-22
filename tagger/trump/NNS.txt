@@ -3,7 +3,6 @@ theres
 candidates
 dogs
 victories
-lets
 cars
 millions
 folks
@@ -11,8 +10,8 @@ problems
 people
 lots
 drugs
+rapists
 guards
-whats
 portions
 years
 thousands
@@ -22,7 +21,6 @@ times
 vehicles
 jobs
 talks
-thats
 enemies
 signals
 costs
@@ -31,7 +29,6 @@ websites
 politicians
 nothings
 speeches
-know
 companies
 sorts
 things
@@ -43,7 +40,6 @@ patients
 lobbyists
 donors
 interests
-vets
 places
 deals
 leaders
@@ -53,7 +49,6 @@ doesnt
 terrorists
 weeks
 trucks
-secrets
 patents
 planes
 apartments
@@ -95,7 +90,6 @@ hes
 tens
 months
 extensions
-assets
 unions
 liabilities
 rates
@@ -241,7 +235,6 @@ numbers
 detainers
 proceedings
 administrations
-streets
 individuals
 jurisdictions
 partnerships
@@ -348,6 +341,7 @@ agencies
 abuses
 partners
 activities
+secrets
 disputes
 measures
 motorcycles
@@ -371,5 +365,6 @@ police
 generals
 senators
 congressmen
+vets
 arenas
 rooms

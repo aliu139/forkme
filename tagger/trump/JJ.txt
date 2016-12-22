@@ -5,14 +5,11 @@ anybodys
 air-conditioner
 big
 serious
-have
 last
-theyre
 true
 good
 common
 right
-know
 large
 rich
 military
@@ -37,9 +34,8 @@ many
 promised
 fellow
 next
-talk
 impossible
-thats
+fine
 early
 destructive
 beside
@@ -64,7 +60,6 @@ proud
 stupid
 bad
 no-good
-exist
 free
 talented
 political
@@ -86,11 +81,9 @@ overrated
 inaudible
 cool
 little
-need
 own
 obsolete
 different
-theyd
 used
 gorgeous
 brand-new
@@ -103,6 +96,7 @@ very
 third
 private
 nobody
+worth
 governmental
 net
 amazing
@@ -116,7 +110,6 @@ medical
 complex
 financial
 summary
-[
 ]
 old-fashioned
 respected
@@ -272,6 +265,7 @@ multiple
 at-risk
 skilled
 vulnerable
+theyre
 central
 doesnt
 touch
@@ -305,7 +299,6 @@ happy
 threatening
 needless
 unfair
-dont
 depleted
 constitutional
 immune
@@ -358,10 +351,11 @@ speakers
 outrageous
 senior
 secure
-im
-vote
+shannon
 russian
+mary
 head-on
+steve
 liberal
 conservative
 thirty

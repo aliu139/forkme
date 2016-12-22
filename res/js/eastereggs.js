@@ -15,10 +15,18 @@ cheet('t r u m p', function () {
   TRUMP_MODE = true;
   CHANCE_OF_SNIPPET = 0;
 
-  let tempElement = document.createElement("IMG");
-  tempElement.src = "res/hair.png";
-  tempElement.classList.add("hairBaby");
-
-  $("#datHair").prepend(tempElement);
+  addHat("res/hair.png", "hairBaby");
 });
 
+cheet('h a c k', function(){
+  alert('I tip my fedora to you good sir');
+  addHat("res/fedora.png", "fedoraBaby");
+})
+
+function addHat(imgName, className){
+  let tempElement = document.createElement("IMG");
+  tempElement.src = imgName;
+  tempElement.classList.add(className);
+
+  $("#datHair").prepend(tempElement);
+}

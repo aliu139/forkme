@@ -37,3 +37,6 @@ README data sources include the following:
 * [React - Basic Theoretical Concepts](https://github.com/reactjs/react-basic/blob/master/README.md)
 * [re-frame](https://github.com/Day8/re-frame/blob/master/README.md)
 * [University of Washington README examples](https://courses.cs.washington.edu/courses/cse326/02wi/homework/hw5/good-readmes.html)
+
+# Thanks
+If you've read up to this point, you deserve to know that typing the name of a certain president-elect **may** affect the dictionaries being used...

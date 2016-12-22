@@ -1,6 +1,6 @@
 going
-laughing
 beating
+laughing
 killing
 sending
 bringing
@@ -12,6 +12,7 @@ taking
 playing
 doing
 gon
+meeting
 running
 devaluing
 saying
@@ -39,9 +40,9 @@ listening
 filing
 thinking
 selling
+telling
 according
 pushing
-telling
 shooting
 converting
 paying
@@ -80,8 +81,6 @@ daring
 roaring
 breathing
 dreaming
-reading
-leaving
 facing
 having
 ending
@@ -91,13 +90,14 @@ wanting
 hurting
 living
 hearing
+nothing
 talking
 residing
 breaking
 watching
 debating
-meeting
 dropping
+proposing
 removing
 waiting
 abolishing
@@ -112,6 +112,7 @@ tracking
 violating
 conducting
 existing
+leaving
 following
 beginning
 seeking
@@ -121,12 +122,12 @@ demanding
 standing
 fighting
 banging
+voting
 pouring
 looking
 hosting
 threatening
 humming
-voting
 promoting
 manufacturing
 founding

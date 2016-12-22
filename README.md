@@ -40,3 +40,4 @@ README data sources include the following:
 
 # Thanks
 If you've read up to this point, you deserve to know that typing the name of a certain president-elect **may** affect the dictionaries being used...
+* [Trump Data](https://github.com/ryanmcdermott/trump-speeches)

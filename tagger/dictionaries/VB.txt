@@ -52,8 +52,6 @@ open
 type
 set
 perform
-`make
-*create
 specify
 restart
 follow
@@ -61,10 +59,8 @@ omit
 update
 setup
 globalize
-[
 give
 enter
-**
 want
 have
 please
@@ -84,7 +80,6 @@ match
 customize
 tweak
 fit
-*if
 feel
 edit
 let
@@ -132,7 +127,6 @@ respond
 compute
 break
 decide
-`v`
 render
 close
 transform
@@ -154,7 +148,6 @@ seem
 leverage
 come
 tame
-**at
 read
 experiment
 feature
@@ -163,7 +156,7 @@ implement
 think
 represent
 accomplish
-as
+“as
 save
 include
 sit

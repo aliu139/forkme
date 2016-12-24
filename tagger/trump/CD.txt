@@ -186,7 +186,7 @@ effective
 99.9
 300,000
 6,000
-theyre
+they’re
 5.3
 80
 7.50
@@ -200,7 +200,7 @@ theyre
 92
 57th
 56th
-theres
+there’s
 52
 757
 2.9

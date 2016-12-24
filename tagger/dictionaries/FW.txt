@@ -1,14 +1,9 @@
-[
 =========
-*
 etc
-`changelog.md`
-**`git
 examples**
 //
 =
 var
-`bind`
 ]
 memoizationcache.arg
 vs.

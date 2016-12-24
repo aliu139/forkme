@@ -1,5 +1,3 @@
 install
 all
-*whats
-`milestone`
 such

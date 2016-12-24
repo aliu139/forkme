@@ -6,7 +6,6 @@ execute
 end
 install
 import
-*
 are
 use
 extend
@@ -17,20 +16,16 @@ do
 specify
 take
 fit
-`make
 ~/.gitconfig
 wish
 apologize
 automate
 change
-dont
+don’t
 wait
 append
 love
 command
-**should
-**exclude
-**by
 include
 exclude
 ]
@@ -43,7 +38,6 @@ clone
 lead
 like
 user.lastname
-*compose*
 start
 tend
 thread
@@ -62,7 +56,6 @@ arg
 call
 catch
 believe
-**with
 transform
 hang
 provide
@@ -70,7 +63,6 @@ evaporation/convection
 design
 compute
 move
-`f`
 build
 mention
 write
@@ -116,6 +108,7 @@ mean
 find
 suppose
 heapsort.ps
+dont
 leave
 perform
 handle

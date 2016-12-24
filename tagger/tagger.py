@@ -8,7 +8,7 @@ import taggen
 if (len(sys.argv) > 1):
     print("tagging " + sys.argv[1])
     input = open(sys.argv[1], 'r')
-    filetextraw = input.read()
+    filetextraw = input.read().decode('utf-8')
     if len(sys.argv) > 2:
         foldername = sys.argv[2]
     else:

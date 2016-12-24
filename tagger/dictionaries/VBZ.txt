@@ -6,7 +6,6 @@ copies
 adds
 looks
 does
-*
 has
 lets
 synchronizes
@@ -40,7 +39,6 @@ splits
 allows
 notes
 lives
-`changelog.md`
 limits
 increases
 commands

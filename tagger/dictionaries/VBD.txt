@@ -1,6 +1,5 @@
 placed
 setup
-*
 had
 made
 separated
@@ -16,7 +15,6 @@ attributed
 got
 merged
 read
-**advanced
 appended
 put
 supported

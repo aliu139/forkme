@@ -4,11 +4,12 @@ import nltk
 import json
 import os
 
-TAGGER_IGNORE = map(lambda a: a.encode('UTF-8'), ['\'', '-', '^', '&', '>'])
+#TAGGER_IGNORE = map(lambda a: a.decode('UTF-8'), ['\'', '-', '^', '&', '>', '`', '*', '<', '['])
+TAGGER_IGNORE = ['\'', '-', '^', '&', '>', '`', '*', '<', '[']
 TAGGER_TYPE_IGNORE = ['$', '\'', '(', ')', ',', '--', '.', ':', 'SYM', '``', '\'\'']
 
 def generate_tags(filetextraw, foldername):
-    filetext = nltk.word_tokenize(filetextraw.decode('utf-8'))
+    filetext = nltk.word_tokenize(filetextraw)
     newArr = nltk.pos_tag(filetext)
     
     if (os.path.isfile(foldername + '/probability.data')):
@@ -25,7 +26,10 @@ def generate_tags(filetextraw, foldername):
         if (item[1] in TAGGER_TYPE_IGNORE):
             continue
         curr_key = item[1]
-        word = item[0].encode('UTF-8')
+        try:
+            word = item[0].decode('utf-8')
+        except:
+            word = item[0]
         if prev_key not in prob_ret_arr:
             prob_ret_arr[prev_key] = {}
         if curr_key not in word_ret_arr:
@@ -44,7 +48,7 @@ def generate_tags(filetextraw, foldername):
             if (os.path.isfile(foldername + '/' + dict + '.txt')):
                 existing_dict = open(foldername + '/' + dict + '.txt', 'r')
                 curr_arr = existing_dict.readlines()
-                curr_arr = map(lambda a: a.strip('\n'), curr_arr)
+                curr_arr = map(lambda a: a.strip('\n').decode('utf-8'), curr_arr)
     
             for word in word_ret_arr[dict]:
                 word = word.lower()
@@ -53,7 +57,7 @@ def generate_tags(filetextraw, foldername):
     
             curr_dict = open(foldername + '/' + dict + '.txt', 'w')
             for word in curr_arr:
-                curr_dict.write(unicode(word + '\n', errors='ignore'))
+                curr_dict.write((word + '\n').encode('utf-8'))
     # save probabilities
     prob_output = json.dumps(prob_ret_arr)
     out_prob = open(foldername + '/probability.data', 'w')

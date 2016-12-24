@@ -54,16 +54,13 @@ much
 otherwise
 no
 never
-**fully
 precisely
 surely
 somewhere
 lovely
-**
 therefore
 probably
 either
-`rake`
 optionally
 yet
 always
@@ -80,7 +77,6 @@ perhaps
 currently
 origin
 fully
-`npm
 formally
 certainly
 actually
@@ -97,7 +93,6 @@ gently
 still
 pretty
 y'know
-**completely
 you're
 hopefully
 slightly
@@ -108,7 +103,6 @@ soon
 possibly
 architecturally
 apart
-**practically
 driven
 accurately
 declaratively
@@ -117,7 +111,6 @@ largely
 often
 differently
 forever
-`s`
 collectively
 efficiently
 reactively

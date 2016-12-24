@@ -127,7 +127,6 @@ children
 others
 projections
 likes
-*note
 examples
 side-effects
 milliseconds
@@ -163,11 +162,9 @@ cookies
 databases
 emails
 descriptions
-`effects`
 mutations
 embraces
 nodes
-`v`
 nuances
 queries
 fragments

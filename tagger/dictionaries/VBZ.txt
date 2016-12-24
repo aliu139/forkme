@@ -83,6 +83,10 @@ causes
 tends
 remains
 falls
+offers
+entails
+arises
+scores
 specifies
 resolves
 exists

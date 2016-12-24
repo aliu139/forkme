@@ -2,4 +2,5 @@ analytics
 projects
 effects
 physics
+masters
 specializations

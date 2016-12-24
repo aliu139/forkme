@@ -4,6 +4,7 @@ strongest
 easiest
 most
 least
+highest
 biggest
 hardest
 longest

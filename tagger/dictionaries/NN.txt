@@ -73,7 +73,7 @@ browser
 template
 language
 syntax
-application’s
+applications
 model
 binding
 application
@@ -300,7 +300,7 @@ digit
 prompt
 profile
 export
-«your-40-digit-github-token»
+your-40-digit-github-token
 error
 /library/ruby/gems/2.0.0/gems/github_api-0.12.2/lib/github_api/response/raise_error.rb:14
 request

@@ -71,7 +71,7 @@ controller
 model-view-_whatever_
 interconnection
 directives
-angularjs’s
+angularjss
 dry
 wysiwyg
 data
@@ -225,7 +225,7 @@ react.js
 transformation
 uis
 namebox
-markbåge
+markbge
 abstraction
 fancyuserbox
 composition

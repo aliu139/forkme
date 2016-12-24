@@ -73,7 +73,7 @@ blazed
 used
 wanted
 watched
-—
+
 prospered
 emptied
 cleaned
@@ -107,7 +107,7 @@ buffaloed
 manufactured
 paid
 upset
-he’d
+hed
 zero
 blown
 loaded
@@ -248,7 +248,7 @@ led
 guns
 stayed
 ended
-–
+
 nominated
 stolen
 asked
@@ -281,10 +281,10 @@ ask
 jared
 packed
 campaigned
-we’re
+were
 frosted
 revived
-died.’
+died.
 considered
 employed
 cast
@@ -306,7 +306,7 @@ fired
 thrown
 jolted
 removed
-something’s
+somethings
 defeated
 sweden
 devalued
@@ -327,7 +327,7 @@ drowned
 interrupted
 polled
 governed
-…and
+and
 released
 justified
 crowds
@@ -346,7 +346,7 @@ dinner
 crippled
 bought
 let
-discredit…all
+discreditall
 envisioned
 rated
 constructed
@@ -361,7 +361,7 @@ excited
 hillary
 stuff
 lied
-you’re
+youre
 reflected
 dragged
 emerged
@@ -374,7 +374,7 @@ discounted
 earned
 antiquated
 contributed
-they’re
+theyre
 suffered
 found
 disgusted

@@ -27,7 +27,7 @@ https
 client-side
 good
 old
-html’s
+htmls
 2-way
 server-side
 hashbang

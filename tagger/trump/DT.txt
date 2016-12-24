@@ -16,6 +16,6 @@ each
 both
 neither
 need
-—
-–
+
+
 trump

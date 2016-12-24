@@ -4,15 +4,15 @@ import nltk
 import json
 import os
 
-TAGGER_IGNORE = ['\'', '-', '^', '&', '>']
+TAGGER_IGNORE = map(lambda a: a.encode('UTF-8'), ['\'', '-', '^', '&', '>'])
 TAGGER_TYPE_IGNORE = ['$', '\'', '(', ')', ',', '--', '.', ':', 'SYM', '``', '\'\'']
 
-def generate_tags(filetextraw):
-    filetext = nltk.word_tokenize(filetextraw)
+def generate_tags(filetextraw, foldername):
+    filetext = nltk.word_tokenize(filetextraw.decode('utf-8'))
     newArr = nltk.pos_tag(filetext)
     
-    if (os.path.isfile('dictionaries/probability.data')):
-        prob_raw = open('dictionaries/probability.data', 'r')
+    if (os.path.isfile(foldername + '/probability.data')):
+        prob_raw = open(foldername + '/probability.data', 'r')
         prob_raw_data = prob_raw.read()
         prob_ret_arr = json.loads(prob_raw_data)
     else:
@@ -25,7 +25,7 @@ def generate_tags(filetextraw):
         if (item[1] in TAGGER_TYPE_IGNORE):
             continue
         curr_key = item[1]
-        word = item[0]
+        word = item[0].encode('UTF-8')
         if prev_key not in prob_ret_arr:
             prob_ret_arr[prev_key] = {}
         if curr_key not in word_ret_arr:
@@ -41,8 +41,8 @@ def generate_tags(filetextraw):
     for dict in word_ret_arr.keys():
         if len(dict)>1 and (dict.strip('.').strip(',').strip('\'') != ""): # should find a better way to do this
             curr_arr = []
-            if (os.path.isfile('dictionaries/' + dict + '.txt')):
-                existing_dict = open('dictionaries/' + dict + '.txt', 'r')
+            if (os.path.isfile(foldername + '/' + dict + '.txt')):
+                existing_dict = open(foldername + '/' + dict + '.txt', 'r')
                 curr_arr = existing_dict.readlines()
                 curr_arr = map(lambda a: a.strip('\n'), curr_arr)
     
@@ -51,10 +51,10 @@ def generate_tags(filetextraw):
                 if (word not in curr_arr) and not (word[0] in TAGGER_IGNORE):
                     curr_arr.append(word)
     
-            curr_dict = open('dictionaries/' + dict + '.txt', 'w')
+            curr_dict = open(foldername + '/' + dict + '.txt', 'w')
             for word in curr_arr:
-                curr_dict.write(word + '\n')
+                curr_dict.write(unicode(word + '\n', errors='ignore'))
     # save probabilities
     prob_output = json.dumps(prob_ret_arr)
-    out_prob = open('dictionaries/probability.data', 'w')
+    out_prob = open(foldername + '/probability.data', 'w')
     out_prob.write(prob_output)

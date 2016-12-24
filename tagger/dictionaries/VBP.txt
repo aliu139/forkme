@@ -23,7 +23,7 @@ wish
 apologize
 automate
 change
-don’t
+dont
 wait
 append
 love
@@ -104,7 +104,6 @@ mean
 find
 suppose
 heapsort.ps
-dont
 leave
 perform
 handle

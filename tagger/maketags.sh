@@ -2,7 +2,7 @@
 rm dictionaries/*
 for file in training/*
 do
-    ./tagger.py $file
+    ./tagger.py $file dictionaries
 done
 #./tagger.py training/demo.txt
 #./tagger.py training/washu_demo1.txt

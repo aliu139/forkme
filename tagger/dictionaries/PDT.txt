@@ -1,5 +1,5 @@
 install
 all
-*what’s
+*whats
 `milestone`
 such

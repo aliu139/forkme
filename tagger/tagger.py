@@ -9,7 +9,11 @@ if (len(sys.argv) > 1):
     print("tagging " + sys.argv[1])
     input = open(sys.argv[1], 'r')
     filetextraw = input.read()
-    taggen.generate_tags(filetextraw)
+    if len(sys.argv) > 2:
+        foldername = sys.argv[2]
+    else:
+        foldername = "dictionaries"
+    taggen.generate_tags(filetextraw, foldername)
 else:
     print("please run with arg")
     exit()

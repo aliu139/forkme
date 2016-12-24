@@ -1,0 +1,42 @@
+Scrum Crash Course
+Scrum offers an alternative to conventional project management practices. With the dynamics of business constantly evolving, management techniques have to evolve as well. Before you can implement Scrum, you need to learn more about how it works and the steps it entails. We designed this document to help our clients and teammates get a quick understanding of how Scrum works and start working with our teams right away.
+This document is organized like a glossary, so you may also think of this as a Scrum cheat sheet.
+Epics
+Overarching Initiatives: If you think about building a piece of software or a website, this could represent an entire page. Stories are associated with Epics. A good epic is defined by all the stories that will accomplish the goal.
+Tips: A good way to think of an Epic is as a set of features that would accomplish a specific goal for the project. When thinking of epics, you may think of milestones. Each project is different, so it will take some practice to get good at breaking projects down into meaningful parts.
+Stories
+A story is like a task but is told as a story.
+For example:
+“As a user, I can update my password and save it to my account”
+Remember, this is about good communication, so try to include images and artifacts to help your teammates understand the intent of the story.
+Also, a good story answers all relevant questions upfront. A scrum master and project manager will help with this.
+Sprint Planning
+A sprint is a block of time. In our case, we work in two-week increments (also known as iterations). Before we kick off a two-week sprint, our scrum team assigned to the project will sit together and pull projects from the icebox and enter them into the backlog to be worked on.
+Use the effort points allocated to each story as a mechanism to understand how much work your team may accomplish within a two-week sprint. The sum of the story points your team is able to accomplish within a sprint is called Velocity.
+The Sprint
+The sprint a sacred block of time that is to be protected at all costs. Once the work has been agreed upon, it is up to the team and the scrum master to work together to achieve the sprint. Teams use meetings, like “The Daily Standup”, and communication tools like Slack to warn each other in case there is a chance that some task will not be completed. The goal of the sprint is to exact all of the work they had agreed upon to either meet or exceed their target velocity.
+The Daily Standup
+When your team is assembled, and wherever possible, a standup is a 10 to 15-minute block of time where you stand with your team and each person gets a minute or so to discuss:
+What they accomplished yesterday
+What they hope to accomplish today
+Is there anything blocking them
+Tip: DO NOT FIND A SOLUTION. Stand-ups tend to take up too much time when we hear a problem and try to find a solution for the problem during the standup. Scrum Masters have to keep the team on task. If a blocker arises or a few team members need to collaborate on something, kindly request that those conversations take place after the standup.
+Blockers
+A blocker is generally a reference to something that is preventing work from being done. This could be missing information, missing technology requirements, another story/epic that needs to be done first, design artifact or even a client meeting that has not occurred yet.
+Dealing with Blockers
+Blockers occur often and vary from case to case but you have to overcome them to keep your team moving. There is no one way to deal with blockers except to communicate clearly. Ask good questions that get to the root of what needs to be solved and have laser focus on solving exactly that. Once you feel the blocker has been eliminated, confirm with your team that they are able to move forward.
+An enemy of success is assumption.
+Velocity
+Velocity is the sum of effort points your team is able to accomplish within a given sprint. It is part of the Scrum Master’s agenda to work with the team to achieve the highest velocity possible. Note that there will be certain things that affect your team’s velocity, for example vacations.
+The Backlog
+The backlog is a set of epics and or stories in order of highest value or customer impact. A backlog should be groomed regularly.
+Steps for Grooming a Backlog
+There are times our teammates may not be using the backlog to record progress on a story. Encourage them to use the tools provided to your team to make sure stories are kept up to date.
+The backlog is sorted by the most important work first, so make sure all the epics and stories are in order.
+Make sure stories are well written and provide as much meaning as possible. Think if someone was looking at the story for the first time, can they sort out what needs to be done without needing to ask you a question?
+Remove or otherwise delete stuff that is just not going to get done or is redundant.
+Sizing
+Stories need to be sized for effort. We use a scale of 1,2,3,5 and 8. To size a story, sit with the scrum team assigned to the backlog and go through the stories and size them with the team. Get everyone involved in contributing to the sizing. Your teammates have different experience and visibility into the work you do.
+Effort and Points
+Effort is not exactly associated with how much time something will take, but the higher the point value allocated to a given task, the more tasking it will be on the team. A good rule of thumb is that if a story scores over 5 points, it should be broken down into more stories.
+With Scrum, you can enhance the efficiency and productivity of your team and also make sure that work is completed on time, without conflict, and without compromising on quality. Scrum offers the ideal framework for modern businesses to improve their operations and achieve their goals.

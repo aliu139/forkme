@@ -1,7 +1,14 @@
-5
-billion
-10
 one
+billion
+20th
+8th
+15
+16
+17
+100
+‘cause
+5
+10
 six
 seven
 eight
@@ -9,7 +16,6 @@ two
 2
 trillion
 four
-100
 50
 30
 20
@@ -32,7 +38,6 @@ million
 2011
 3d
 1990s
-17
 45
 46
 55
@@ -48,7 +53,6 @@ zero
 39
 49
 2016
-15
 1290
 2.5
 400
@@ -73,7 +77,6 @@ nine
 12
 3,000
 42
-16
 59
 51
 69
@@ -208,7 +211,6 @@ there’s
 66
 33,000
 thirty-three
-8th
 21.6
 8.4
 2013

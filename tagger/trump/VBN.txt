@@ -1,3 +1,17 @@
+released
+been
+written
+had
+treated
+gone
+announced
+built
+opposed
+bid
+involved
+told
+seen
+done
 headed
 caused
 broken
@@ -5,8 +19,6 @@ prosecuted
 heard
 hit
 sued
-done
-been
 beaten
 created
 lost
@@ -19,7 +31,6 @@ kicked
 afforded
 got
 collapsed
-seen
 completed
 rusted
 corroded
@@ -42,8 +53,6 @@ armed
 funded
 snubbed
 criticized
-treated
-announced
 known
 laughed
 engaged
@@ -56,8 +65,6 @@ supported
 threatened
 charged
 attacked
-opposed
-gone
 expanded
 shrunk
 proposed
@@ -86,7 +93,6 @@ pushed
 invested
 become
 taken
-had
 wounded
 left
 broadcast
@@ -95,7 +101,6 @@ wished
 prayed
 happened
 eradicated
-involved
 controlled
 abandoned
 elected
@@ -116,14 +121,12 @@ ripped
 filed
 reported
 named
-built
 sought
 shocked
 lax
 compared
 chilled
 forgotten
-told
 okay
 projected
 honest
@@ -139,7 +142,6 @@ fed
 crooked
 given
 dropped
-written
 applied
 mentioned
 tied
@@ -328,7 +330,6 @@ interrupted
 polled
 governed
 …and
-released
 justified
 crowds
 maxed

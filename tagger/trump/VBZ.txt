@@ -1,6 +1,12 @@
+knows
 is
-does
 has
+we’re
+gotten
+they’re
+it’s
+he’s
+does
 ends
 happens
 kicks
@@ -23,13 +29,11 @@ runs
 believes
 uses
 falls
-knows
 replaces
 understands
 dislikes
 becomes
 lacks
-they’re
 watches
 increases
 expands
@@ -38,8 +42,6 @@ refuses
 pushes
 terrorists
 blames
-it’s
-we’re
 we’ve
 takes
 gives
@@ -72,7 +74,6 @@ i’m
 thinks
 she’s
 wins
-he’s
 don’t
 bothers
 agrees
@@ -111,7 +112,6 @@ admits
 plans
 promotes
 continues
-gotten
 demands
 places
 focuses

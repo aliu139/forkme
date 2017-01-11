@@ -1,3 +1,5 @@
+motors
+veterans
 republicans
 chinese
 democrats
@@ -25,7 +27,6 @@ governors
 trump
 achilles
 sessions
-veterans
 african-americans
 syrians
 persians

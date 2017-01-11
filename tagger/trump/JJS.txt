@@ -1,6 +1,8 @@
-best
-most
+largest
 greatest
+most
+least
+best
 worst
 oldest
 cheapest
@@ -9,9 +11,7 @@ biggest
 strongest
 honest
 smartest
-largest
 we’ll
-least
 highest
 dumbest
 toughest

@@ -1,0 +1,8 @@
+city
+San Jose
+New York City
+Ithaca
+San Francisco
+Santa Clara
+Boston
+Cambridge
